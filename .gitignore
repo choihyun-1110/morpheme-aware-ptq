@@ -1,0 +1,28 @@
+# 양자화 모델 (수십 GB)
+quantized_models/
+
+# HuggingFace 캐시
+.cache/
+
+# 외부 라이브러리 (서브모듈 아님)
+lm-evaluation-harness/
+
+# HuggingFace 모델 파일 (루트에 복사된 것)
+modeling_llama.py
+
+# eval 결과 (log_samples 포함 시 대용량)
+results/eval_*.json
+results/samples_*.jsonl
+
+# 빌드/런 로그
+results/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# 임시 파일
+*.tmp
+*.swp

@@ -1,0 +1,8 @@
+# Sprint 1 - Calibration Set 구축 파이프라인 의존성
+datasets>=2.14.0
+kiwipiepy>=0.17.0
+numpy>=1.24.0
+transformers>=4.44.0
+matplotlib>=3.7.0
+# kss는 선택사항 (미설치 시 정규식 기반 문장 분리로 fallback)
+# kss>=6.0.0
