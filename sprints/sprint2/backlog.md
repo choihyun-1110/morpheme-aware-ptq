@@ -133,3 +133,48 @@
   - 단일 런 재현성 확인 (B vs C_v3 차이 0.018이 노이즈인지 신호인지)
   - kmmlu 추가 검증 여부 결정
   - 스프린트 2 결론 정리 및 보고서 초안
+
+## 진행 메모 (2026-03-19)
+
+- 컨텍스트 초과로 이전 대화 세션 종료 후 재개. C_v3 양자화는 이미 완료 상태였음.
+- **calibration 통계 비교 완료** (상세: `thoughts/11_calibration_통계비교_최종_BCC_v3.md`):
+  - SFS: C_v3=6.57 vs C=6.80 — 거의 동일. SFS 정상화가 성능 회복 원인이 아님
+  - 핵심 메커니즘: 총 고유 subword 커버리지 846→570 (B=527 수준)으로 급감
+  - 비한국어 subword 제거가 GPTQ 가중치 근사 품질 회복의 실제 원인
+- **C_v3 재현 실험 완료**: Run1=0.6354, Run2=0.6356, 차이 0.0002 — 신호 확인
+- **kmmlu 교차 검증 완료** (A/B/C/C_v3, 상세: `thoughts/13_kmmlu_교차검증.md`):
+  - kmmlu 순위: C(0.3752) > C_v3(0.3747) > B(0.3731) > A(0.3677)
+  - C_v3 > B는 두 벤치마크 모두에서 성립
+  - 원본 C가 kmmlu 1위: 비한국어 영향이 지식 암기 태스크보다 이해력 태스크에 더 큼
+- **C_v4 생성 및 양자화 완료**:
+  - 파라미터: min_eojeols=8, c_target_eojeols=18, min_ko_ratio=0.7 (어절 수 B 수준 목표)
+  - calibration: `results/calibration_set_C_v4_upstage_SOLAR-10.7B-Instruct-v1.0.json`
+  - 양자화: `quantized_models/SOLAR_10.7B_4bit_cond_C_v4/`
+- **C_v4 kobest/kmmlu 평가 완료**:
+  - kobest: 0.6005 (C_v3 0.6356보다 낮음 — 길이 증가 효과 없음)
+  - kmmlu: 0.3732 (C_v3 0.3747보다 낮음)
+  - 결론: C_v3 우위는 비한국어 subword 제거 덕분, 길이 효과 아님 확정
+
+## 진행 메모 (2026-03-19 후반)
+
+- **Activation 분포 분석 완료** (`src/analyze_activations.py`, 결과: `results/activation_analysis.json`):
+  - FP16 모델에 B/C/C_v3/C_v4 calibration 통과시켜 레이어별 activation 통계 비교
+  - C_v3가 channel_cv(10.66), mean_std(1.317) 모두 최고 — 가장 다양한 activation 분포 유도
+  - outlier_ratio는 조건 간 차이 없음 (모두 ~0.0002)
+  - 상세: `thoughts/13_kmmlu_교차검증.md` §6 참조
+
+- **Sprint 2 최종 결론 확정** (`thoughts/12_스프린트2_최종결론.md` 최종 업데이트):
+  - KoBEST: C_v3(0.6356) > B(0.6176) > C(0.6062) > C_v4(0.6005) > A(0.5981) > C_v2(0.5779)
+  - kmmlu: C(0.3752) > C_v3(0.3747) > C_v4(0.3732) ≈ B(0.3731) > A(0.3677)
+  - C_v3가 두 벤치마크 모두에서 B를 상회 → 가설 검증
+
+- **다모델 검증 완료** (Llama3-Ko-8B / EEVE-10B, 상세: `thoughts/14_다모델_검증_결과.md`):
+  - Llama3-Ko: A(0.5758) > C_v3(0.5650) > B(0.5608) — 영어 사전학습 모델에서 영어 calibration 최선
+  - EEVE-10B: B(0.7595) > C_v3(0.7514) > A(0.7172) — SOLAR 기반이지만 B가 최선
+  - **가설 정제**: "한국어 calibration 만능"이 아니라 "사전학습 주 언어 = calibration 언어"
+  - SOLAR처럼 한국어 전용 사전학습 모델에서만 C_v3 효과 뚜렷
+
+- **Sprint 2 종료 — Sprint 3 시작**:
+  - Sprint 3 핵심: Qwen2-7B(중국어 사전학습) + 중국어 calibration 실험
+  - 성공 시 주장: "calibration을 모델 사전학습 주 언어에 맞추면 GPTQ 품질 보존"
+  - 상세 계획: `sprints/sprint3/backlog.md`

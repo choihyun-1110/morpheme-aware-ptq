@@ -1,0 +1,12 @@
+{
+  "label": "FP16",
+  "model_path": "/home/choihyun/workspace/.cache/huggingface/hub/models--upstage--SOLAR-10.7B-Instruct-v1.0/snapshots/090d405e6fe7b4c7b0b999a67f5c6dee0514a7ad",
+  "quantized": false,
+  "vram_used_mib": 22299,
+  "load_time_s": 7.85,
+  "num_prompts": 32,
+  "total_output_tokens": 7196,
+  "infer_time_s": 14.9,
+  "throughput_tok_per_sec": 482.87,
+  "avg_latency_ms": 465.7
+}

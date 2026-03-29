@@ -1,0 +1,1302 @@
+{
+  "condition": "C_zh_morphology_diverse",
+  "model": "Qwen/Qwen2-7B-Instruct",
+  "n_sentences": 128,
+  "n_unique_morphemes": 1652,
+  "avg_diversity_score": 0.6658,
+  "avg_sfs": 2.2859,
+  "avg_n_tokens": 28.88,
+  "params": {
+    "model": "Qwen/Qwen2-7B-Instruct",
+    "n_sentences": 128,
+    "n_candidates": 50000,
+    "alpha": 0.3,
+    "min_words": 5,
+    "min_tokens": 20,
+    "min_zh_ratio": 0.7,
+    "seed": 42,
+    "suffix": "zh"
+  },
+  "sentences": [
+    {
+      "text": "列传第十三 山濤 子山簡 簡子山遐 王戎 從弟王衍 衍弟王澄 郭舒 樂廣",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0769,
+      "n_tokens": 40,
+      "diversity_score": 0.7461
+    },
+    {
+      "text": "载记第十 前燕 慕容儁 韓恆 李產",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.7436
+    },
+    {
+      "text": "總　　　統　陳水扁　　　　行政院院長　游錫堃",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.739
+    },
+    {
+      "text": "列传第六十 良吏 魯芝 胡威 子胡奕 杜軫 子杜毗 杜秀 弟杜烈 杜良 竇允 王宏 曹攄 潘京 范晷 子范廣 范稚 丁紹 喬智明 鄧攸 吳隱之",
+      "n_words": 28,
+      "n_unique_morphemes": 28,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0741,
+      "n_tokens": 83,
+      "diversity_score": 0.746
+    },
+    {
+      "text": "列传第七十 王彌 張昌 陳敏 王如 杜曾 杜弢 王機 祖約 蘇峻 孫恩 盧循 譙縱",
+      "n_words": 16,
+      "n_unique_morphemes": 16,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.9375,
+      "n_tokens": 47,
+      "diversity_score": 0.7416
+    },
+    {
+      "text": "九龙山摩崖造像石刻  唐  小雪街道武家村",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.7187
+    },
+    {
+      "text": "列传第二十七 羅憲 兄子羅尚 滕脩 馬隆 胡奮 陶璜 吾彥 張光 趙誘",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 40,
+      "diversity_score": 0.739
+    },
+    {
+      "text": "列传第十五 劉毅 子劉暾 程衛 和嶠 武陔 任愷 崔洪 郭奕 侯史光 何攀",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.6667,
+      "n_tokens": 40,
+      "diversity_score": 0.7329
+    },
+    {
+      "text": "農曆三月二十二日十八份盟會慶祝天上聖母聖誕祝壽通疏過火",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.9231,
+      "n_tokens": 25,
+      "diversity_score": 0.7091
+    },
+    {
+      "text": "南秋田郡　　五城目町　八郎潟町　井川町　大潟村",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.7692,
+      "n_tokens": 23,
+      "diversity_score": 0.7041
+    },
+    {
+      "text": "江泽民　李　鹏　朱镕基　李瑞环　胡锦涛　尉健行　李岚清　丁关根　田纪云　李长春　李铁映　吴邦国　吴官正　迟浩田　张万年　罗　幹　姜春云　贾庆林　钱其琛　黄　菊　温家宝　曾庆红　吴　仪（女）　万　里　乔　石　宋　平　刘华清　薄一波　宋任穷　叶选平　宋　健　曹庆泽",
+      "n_words": 43,
+      "n_unique_morphemes": 40,
+      "umr": 0.9302,
+      "ttr": 0.9767,
+      "sfs": 3.122,
+      "n_tokens": 128,
+      "diversity_score": 0.7115
+    },
+    {
+      "text": "財團法人天主教會台北教區附設臺北市私立曉星幼兒園",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.75,
+      "n_tokens": 21,
+      "diversity_score": 0.7035
+    },
+    {
+      "text": "列传第四十 應詹 甘卓 鄧騫 卞壼 從父兄卞敦 劉超 锺雅",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2857,
+      "n_tokens": 32,
+      "diversity_score": 0.7207
+    },
+    {
+      "text": "1645年：蒂雷納子爵與大孔代率領的法軍在納德林根戰役戰勝並擊斃巴伐利亞軍指揮官。",
+      "n_words": 24,
+      "n_unique_morphemes": 21,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 42,
+      "diversity_score": 0.6987
+    },
+    {
+      "text": "至正末年明洪武元年 1368 毁于兵火",
+      "n_words": 8,
+      "n_unique_morphemes": 7,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.6941
+    },
+    {
+      "text": "成化五年 1469 知府钱澍重建礼殿及麓山寺碑亭",
+      "n_words": 11,
+      "n_unique_morphemes": 10,
+      "umr": 0.9091,
+      "ttr": 1.0,
+      "sfs": 2.4444,
+      "n_tokens": 22,
+      "diversity_score": 0.6931
+    },
+    {
+      "text": "列传第三十八 顧榮 紀瞻 賀循 楊方 薛兼",
+      "n_words": 7,
+      "n_unique_morphemes": 7,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.75,
+      "n_tokens": 22,
+      "diversity_score": 0.7356
+    },
+    {
+      "text": "虛弱 / 無精打釆 偷吃後數小時內嘔吐或腹瀉",
+      "n_words": 15,
+      "n_unique_morphemes": 14,
+      "umr": 0.9333,
+      "ttr": 1.0,
+      "sfs": 2.0833,
+      "n_tokens": 25,
+      "diversity_score": 0.6903
+    },
+    {
+      "text": "列传第五十八 孝友 李密 盛彥 夏方 王裒 許孜 庾袞 孫晷 顏含 劉殷 王延 王談 桑虞 何琦 吳逵",
+      "n_words": 20,
+      "n_unique_morphemes": 19,
+      "umr": 0.95,
+      "ttr": 0.95,
+      "sfs": 3.1111,
+      "n_tokens": 56,
+      "diversity_score": 0.7057
+    },
+    {
+      "text": "孫子 馮丹宇 現任中國人民解放軍海軍副司令員。",
+      "n_words": 10,
+      "n_unique_morphemes": 9,
+      "umr": 0.9,
+      "ttr": 1.0,
+      "sfs": 2.1,
+      "n_tokens": 21,
+      "diversity_score": 0.6788
+    },
+    {
+      "text": "志第五 地理下（青州 徐州 荊州 揚州 交州 廣州）",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 2.7,
+      "n_tokens": 27,
+      "diversity_score": 0.6741
+    },
+    {
+      "text": "同樣，南燕開國君主燕獻武帝慕容德亦為燕文明帝之子",
+      "n_words": 12,
+      "n_unique_morphemes": 11,
+      "umr": 0.9167,
+      "ttr": 1.0,
+      "sfs": 1.75,
+      "n_tokens": 21,
+      "diversity_score": 0.6736
+    },
+    {
+      "text": "帕格尼尼小提琴大赛 ( 意大利 热那亚 )",
+      "n_words": 7,
+      "n_unique_morphemes": 5,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 4.0,
+      "n_tokens": 20,
+      "diversity_score": 0.6731
+    },
+    {
+      "text": "列传第十七 傅玄 子傅咸 咸子傅敷 咸從父弟傅祗",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.6,
+      "n_tokens": 26,
+      "diversity_score": 0.7308
+    },
+    {
+      "text": "舊派蘇州話多一套捲舌聲母，因而相應地多出兩個舌尖韻母  和 。",
+      "n_words": 20,
+      "n_unique_morphemes": 18,
+      "umr": 0.9,
+      "ttr": 1.0,
+      "sfs": 1.8,
+      "n_tokens": 27,
+      "diversity_score": 0.6692
+    },
+    {
+      "text": "原文：二人並誓記　天前誓　今自三年以後　忠道執持　過失無誓",
+      "n_words": 17,
+      "n_unique_morphemes": 16,
+      "umr": 0.9412,
+      "ttr": 1.0,
+      "sfs": 1.9231,
+      "n_tokens": 25,
+      "diversity_score": 0.688
+    },
+    {
+      "text": "北约開始轟炸南斯拉夫，这是北約首次對主權國家發動軍事攻擊。",
+      "n_words": 16,
+      "n_unique_morphemes": 14,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6667
+    },
+    {
+      "text": "列传第三十九 劉隗 孫劉波 伯父劉訥 刁協 子刁彝 彝子刁逵 戴若思（戴淵） 弟戴邈 周顗",
+      "n_words": 21,
+      "n_unique_morphemes": 19,
+      "umr": 0.9048,
+      "ttr": 1.0,
+      "sfs": 3.1333,
+      "n_tokens": 47,
+      "diversity_score": 0.7137
+    },
+    {
+      "text": "中古開口一等歌韻部份常用字，今日閩語讀作合口呼。",
+      "n_words": 13,
+      "n_unique_morphemes": 11,
+      "umr": 0.8462,
+      "ttr": 1.0,
+      "sfs": 2.3,
+      "n_tokens": 23,
+      "diversity_score": 0.6659
+    },
+    {
+      "text": "規劃師註冊管理局總部: 位於鰂魚涌泓富產業千禧廣場",
+      "n_words": 20,
+      "n_unique_morphemes": 19,
+      "umr": 0.95,
+      "ttr": 1.0,
+      "sfs": 1.1053,
+      "n_tokens": 21,
+      "diversity_score": 0.6649
+    },
+    {
+      "text": "遼朝为金滅亡後金自稱繼承之遼朝法統，並以正統自居",
+      "n_words": 17,
+      "n_unique_morphemes": 16,
+      "umr": 0.9412,
+      "ttr": 1.0,
+      "sfs": 2.3636,
+      "n_tokens": 26,
+      "diversity_score": 0.7021
+    },
+    {
+      "text": "正德四年 1509 守道吴世忠拆毁道林寺，扩建书院",
+      "n_words": 10,
+      "n_unique_morphemes": 8,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 2.75,
+      "n_tokens": 22,
+      "diversity_score": 0.6638
+    },
+    {
+      "text": "德“齊默曼密電”改寫一戰史破譯原件驚現英國",
+      "n_words": 13,
+      "n_unique_morphemes": 11,
+      "umr": 0.8462,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.6634
+    },
+    {
+      "text": "1\t行政院緊急公害糾紛處理小組 環境部",
+      "n_words": 9,
+      "n_unique_morphemes": 8,
+      "umr": 0.8889,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.6991
+    },
+    {
+      "text": "丹溪心法  中藥方劑像數據庫  (香港浸會大學中醫藥學院)",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 2.3,
+      "n_tokens": 23,
+      "diversity_score": 0.6613
+    },
+    {
+      "text": "列传第二十二 郤詵 阮种 華譚 袁甫",
+      "n_words": 8,
+      "n_unique_morphemes": 7,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.7033
+    },
+    {
+      "text": "李兆华校正  《四元玉鉴》  科学出版社 2007",
+      "n_words": 8,
+      "n_unique_morphemes": 5,
+      "umr": 0.625,
+      "ttr": 1.0,
+      "sfs": 4.6,
+      "n_tokens": 23,
+      "diversity_score": 0.6603
+    },
+    {
+      "text": "第五套人民币20元以桂林阳朔漓江黃布灘倒影与元宝山作为背面装饰。",
+      "n_words": 16,
+      "n_unique_morphemes": 14,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 1.7857,
+      "n_tokens": 25,
+      "diversity_score": 0.6598
+    },
+    {
+      "text": "知道相對濕度以及實際氣溫時，露點可以透過以下公式求得近似值：",
+      "n_words": 16,
+      "n_unique_morphemes": 14,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 1.7692,
+      "n_tokens": 23,
+      "diversity_score": 0.6593
+    },
+    {
+      "text": "|國家象徵 = 凯尔特竖琴酢漿草馬鈴薯",
+      "n_words": 9,
+      "n_unique_morphemes": 7,
+      "umr": 0.7778,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.6592
+    },
+    {
+      "text": "避清宣宗旻寧讳，北京外城廣寧門改名廣安門。",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.6588
+    },
+    {
+      "text": "| 德國在台協會日商三共生興碩利環球投資以色列商瑞得韋爾",
+      "n_words": 13,
+      "n_unique_morphemes": 12,
+      "umr": 0.9231,
+      "ttr": 1.0,
+      "sfs": 1.9231,
+      "n_tokens": 25,
+      "diversity_score": 0.6815
+    },
+    {
+      "text": "磁鐵礦晶體的熱力學穩定性比氫氧化亞鐵高。",
+      "n_words": 11,
+      "n_unique_morphemes": 10,
+      "umr": 0.9091,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.686
+    },
+    {
+      "text": "丁氏八千卷楼藏刘寅《武经七书直解》影印本",
+      "n_words": 10,
+      "n_unique_morphemes": 8,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 20,
+      "diversity_score": 0.6558
+    },
+    {
+      "text": "簡穎湘：前中僑互助會行政總監、加拿大卑詩省首位華裔入籍女法官",
+      "n_words": 17,
+      "n_unique_morphemes": 15,
+      "umr": 0.8824,
+      "ttr": 1.0,
+      "sfs": 2.1667,
+      "n_tokens": 26,
+      "diversity_score": 0.6746
+    },
+    {
+      "text": "作用力與反作用力這基本物理概念，時常會被許多人一知半解地應用。第三定律的現代表述為",
+      "n_words": 23,
+      "n_unique_morphemes": 21,
+      "umr": 0.913,
+      "ttr": 1.0,
+      "sfs": 1.6316,
+      "n_tokens": 31,
+      "diversity_score": 0.6685
+    },
+    {
+      "text": "提供塔拉瓦往楠迪和諾魯，連接霍尼亞拉和布里斯班。",
+      "n_words": 10,
+      "n_unique_morphemes": 8,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 2.4444,
+      "n_tokens": 22,
+      "diversity_score": 0.654
+    },
+    {
+      "text": "第09期 怀圣寺始建唐朝 光塔虽斜但无恙 古寺铭刻圣人言高塔千年保真身 - 《南方都市報》",
+      "n_words": 25,
+      "n_unique_morphemes": 21,
+      "umr": 0.84,
+      "ttr": 1.0,
+      "sfs": 1.95,
+      "n_tokens": 39,
+      "diversity_score": 0.6525
+    },
+    {
+      "text": "1984年：楊佳運，台灣搖滾樂團八三夭團長兼鍵盤手",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.6758
+    },
+    {
+      "text": "中国卫生部从即日起恢复对中国内地传染性非典型肺炎疫情监测情况的每日通报。",
+      "n_words": 16,
+      "n_unique_morphemes": 15,
+      "umr": 0.9375,
+      "ttr": 1.0,
+      "sfs": 1.4,
+      "n_tokens": 21,
+      "diversity_score": 0.6699
+    },
+    {
+      "text": "《叛逆歲月 精華版 光宗篇 光之變奏》",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.6792
+    },
+    {
+      "text": "駁二藝術特區：捷運O2鹽埕埔車站，一號出口",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.6469
+    },
+    {
+      "text": "專利權違法遭撤銷，且窮盡一切救濟程序仍無法恢復其權利者。",
+      "n_words": 20,
+      "n_unique_morphemes": 18,
+      "umr": 0.9,
+      "ttr": 1.0,
+      "sfs": 1.6,
+      "n_tokens": 24,
+      "diversity_score": 0.6628
+    },
+    {
+      "text": "卡克福斯特斯至希斯路機場5號客運大樓：每10分鐘一班",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.6456
+    },
+    {
+      "text": "列传第五十三 顧和 袁瑰 子袁喬 喬孫袁山松 瑰弟袁猷 從祖袁準 準孫袁耽 耽子袁質 質子袁湛 湛弟袁豹 江逌 從弟江灌 灌子江績 車胤 殷顗 王雅",
+      "n_words": 33,
+      "n_unique_morphemes": 31,
+      "umr": 0.9394,
+      "ttr": 0.9394,
+      "sfs": 2.6875,
+      "n_tokens": 86,
+      "diversity_score": 0.6833
+    },
+    {
+      "text": "美国国土安全部部长汤姆·里奇宣布，美国政府已经将恐怖威胁警告级别从橙色降低到黄色。",
+      "n_words": 22,
+      "n_unique_morphemes": 19,
+      "umr": 0.8636,
+      "ttr": 1.0,
+      "sfs": 1.4211,
+      "n_tokens": 27,
+      "diversity_score": 0.644
+    },
+    {
+      "text": "用假审讯来包庇他们，使那些杀害我们各邦居民的谋杀者逍遥法外；",
+      "n_words": 18,
+      "n_unique_morphemes": 16,
+      "umr": 0.8889,
+      "ttr": 1.0,
+      "sfs": 1.7143,
+      "n_tokens": 24,
+      "diversity_score": 0.6625
+    },
+    {
+      "text": "叶夫图申科夫费利克斯弗拉基米罗维奇 俄罗斯企业家，MTS PJSC董事会主席",
+      "n_words": 14,
+      "n_unique_morphemes": 11,
+      "umr": 0.7857,
+      "ttr": 1.0,
+      "sfs": 2.2727,
+      "n_tokens": 25,
+      "diversity_score": 0.6434
+    },
+    {
+      "text": "1984年：爱尔兰共和军於东萨塞克斯郡布莱顿白禮頓格蘭德酒店所召開保守黨高級官員年會中引爆巨型炸彈，並刺杀首相柴契爾夫人未遂。",
+      "n_words": 30,
+      "n_unique_morphemes": 26,
+      "umr": 0.8667,
+      "ttr": 1.0,
+      "sfs": 2.08,
+      "n_tokens": 52,
+      "diversity_score": 0.6662
+    },
+    {
+      "text": "切格瓦拉論游擊戰，木馬文化事業股份有限公司, 2012",
+      "n_words": 12,
+      "n_unique_morphemes": 9,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 2.625,
+      "n_tokens": 21,
+      "diversity_score": 0.6418
+    },
+    {
+      "text": "反輻射飛彈瞄準電磁輻射源，尤其是雷達發射器。",
+      "n_words": 14,
+      "n_unique_morphemes": 12,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 2.2,
+      "n_tokens": 22,
+      "diversity_score": 0.6667
+    },
+    {
+      "text": "亞歷山大二世在位期間，俄羅斯帝國從清廷手中割取了外東北和外西北近一百四十四萬多平方公里土地。",
+      "n_words": 22,
+      "n_unique_morphemes": 20,
+      "umr": 0.9091,
+      "ttr": 1.0,
+      "sfs": 1.7619,
+      "n_tokens": 37,
+      "diversity_score": 0.6713
+    },
+    {
+      "text": "城区西南的虎门镇因虎门销烟而闻名于世，现存林则徐销烟池与虎门炮台旧址等近代史迹。",
+      "n_words": 21,
+      "n_unique_morphemes": 19,
+      "umr": 0.9048,
+      "ttr": 1.0,
+      "sfs": 1.8421,
+      "n_tokens": 35,
+      "diversity_score": 0.6723
+    },
+    {
+      "text": "内拿破侖三角形的面积大于等于 0 给出外森比克不等式。",
+      "n_words": 16,
+      "n_unique_morphemes": 14,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 1.8462,
+      "n_tokens": 24,
+      "diversity_score": 0.6617
+    },
+    {
+      "text": "1847年：耶稣基督后期圣徒教会首领杨百翰带领首批摩尔门先驱者前往犹他州盐湖城拓荒。",
+      "n_words": 19,
+      "n_unique_morphemes": 16,
+      "umr": 0.8421,
+      "ttr": 1.0,
+      "sfs": 2.125,
+      "n_tokens": 34,
+      "diversity_score": 0.6589
+    },
+    {
+      "text": "陈 葛 黄 侯 李 梁 卢 陆 彭 唐 田 王 徐 邢 杨 于 周 朱 张 庄 郑 赵",
+      "n_words": 22,
+      "n_unique_morphemes": 22,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3182,
+      "n_tokens": 51,
+      "diversity_score": 0.7217
+    },
+    {
+      "text": "歐洲黑暗時代，约476年西羅馬帝國滅亡至14世紀文藝復興開始",
+      "n_words": 18,
+      "n_unique_morphemes": 15,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 2.25,
+      "n_tokens": 27,
+      "diversity_score": 0.6597
+    },
+    {
+      "text": "奥地利王位继承战争：法西聯盟與國本詔書聯軍達成僵局。",
+      "n_words": 13,
+      "n_unique_morphemes": 11,
+      "umr": 0.8462,
+      "ttr": 1.0,
+      "sfs": 2.3,
+      "n_tokens": 23,
+      "diversity_score": 0.6659
+    },
+    {
+      "text": "蔡　奇 - 第十九届中共中央政治局委员，第二十届中共中央政治局常委、中央书记处书记",
+      "n_words": 13,
+      "n_unique_morphemes": 10,
+      "umr": 0.7692,
+      "ttr": 1.0,
+      "sfs": 2.3,
+      "n_tokens": 23,
+      "diversity_score": 0.6383
+    },
+    {
+      "text": "董其昌：《明故徐豫庵隐君暨配王孺人合葬墓志铭》。",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 1.0,
+      "sfs": 2.6667,
+      "n_tokens": 24,
+      "diversity_score": 0.6372
+    },
+    {
+      "text": "胞姊烏雅氏，嫁镶黄旗满洲一等公鈕祜祿氏阿靈阿 (鈕祜祿氏)。",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 35,
+      "diversity_score": 0.6639
+    },
+    {
+      "text": "1853年：美國海軍准將馬修·培里率領四艘黑船停靠日本浦賀，遞交國書迫使江戶幕府結束鎖國。",
+      "n_words": 24,
+      "n_unique_morphemes": 19,
+      "umr": 0.7917,
+      "ttr": 1.0,
+      "sfs": 2.4706,
+      "n_tokens": 42,
+      "diversity_score": 0.6518
+    },
+    {
+      "text": "2.26億年 - 太陽系繞銀河系中心公轉一周的所需時間",
+      "n_words": 14,
+      "n_unique_morphemes": 12,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 22,
+      "diversity_score": 0.6603
+    },
+    {
+      "text": "嗜碱性粒细胞：嗜鹼性白血球主要引發過敏反應，釋放組織胺並造成平滑肌收縮、血管舒張等等。",
+      "n_words": 23,
+      "n_unique_morphemes": 19,
+      "umr": 0.8261,
+      "ttr": 1.0,
+      "sfs": 2.0556,
+      "n_tokens": 37,
+      "diversity_score": 0.6509
+    },
+    {
+      "text": "军用水下机器人技术国防科技重点实验室：由国防科学技术工业委员会主管，依托哈尔滨工程大学。",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 1.8333,
+      "n_tokens": 22,
+      "diversity_score": 0.6344
+    },
+    {
+      "text": "皮爾斯鋼琴地圖 （專門收錄鋼琴製造商名錄的出版品）",
+      "n_words": 17,
+      "n_unique_morphemes": 15,
+      "umr": 0.8824,
+      "ttr": 1.0,
+      "sfs": 1.5333,
+      "n_tokens": 23,
+      "diversity_score": 0.6543
+    },
+    {
+      "text": "2020年：亞美尼亞民眾不滿政府與亞塞拜然簽訂納戈爾諾-卡拉巴赫停火協議，衝入國會大廈要求總理尼科尔·帕希尼扬下台。",
+      "n_words": 28,
+      "n_unique_morphemes": 22,
+      "umr": 0.7857,
+      "ttr": 1.0,
+      "sfs": 2.8421,
+      "n_tokens": 54,
+      "diversity_score": 0.6616
+    },
+    {
+      "text": "似乎还有好幾位其它自然哲學家與科學家分別獨立地想出了慣性定律。",
+      "n_words": 17,
+      "n_unique_morphemes": 16,
+      "umr": 0.9412,
+      "ttr": 1.0,
+      "sfs": 1.375,
+      "n_tokens": 22,
+      "diversity_score": 0.6704
+    },
+    {
+      "text": "瀧乃湯溫泉浴室，北投現存最古老的日式溫泉浴池。",
+      "n_words": 14,
+      "n_unique_morphemes": 12,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 1.9091,
+      "n_tokens": 21,
+      "diversity_score": 0.6573
+    },
+    {
+      "text": "熊晓鸽  毕业于湖南大学外语系，IDG集团全球副总裁兼亚洲区总裁",
+      "n_words": 13,
+      "n_unique_morphemes": 11,
+      "umr": 0.8462,
+      "ttr": 1.0,
+      "sfs": 2.0909,
+      "n_tokens": 23,
+      "diversity_score": 0.6592
+    },
+    {
+      "text": "范克廉樓教職員餐廳（又名中菜館，所有人士均可入座）",
+      "n_words": 14,
+      "n_unique_morphemes": 11,
+      "umr": 0.7857,
+      "ttr": 1.0,
+      "sfs": 1.9091,
+      "n_tokens": 21,
+      "diversity_score": 0.6317
+    },
+    {
+      "text": "王胜俊 - 第十一届最高人民法院院长，第十二届全国人大常委会副委员长 .",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.6313
+    },
+    {
+      "text": "2011年：美國職棒大聯盟波士頓紅襪隊投手提姆·韋克菲爾德贏得生涯第兩百勝。",
+      "n_words": 21,
+      "n_unique_morphemes": 16,
+      "umr": 0.7619,
+      "ttr": 1.0,
+      "sfs": 2.7143,
+      "n_tokens": 38,
+      "diversity_score": 0.649
+    },
+    {
+      "text": "《奉同張敬夫城南二十詠詩卷》北京故宮博物院藏",
+      "n_words": 13,
+      "n_unique_morphemes": 11,
+      "umr": 0.8462,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 20,
+      "diversity_score": 0.6563
+    },
+    {
+      "text": "又譯圖納思教授，大陸部分譯本譯作卡爾庫魯斯教授",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 0.9167,
+      "sfs": 2.4444,
+      "n_tokens": 22,
+      "diversity_score": 0.6268
+    },
+    {
+      "text": "道光十二年，准許西域新疆地區與浩罕汗國重開貿易。",
+      "n_words": 13,
+      "n_unique_morphemes": 11,
+      "umr": 0.8462,
+      "ttr": 1.0,
+      "sfs": 1.9091,
+      "n_tokens": 21,
+      "diversity_score": 0.6534
+    },
+    {
+      "text": "洗滌劑 - 通常包括表面活性劑類型，如烷基苯磺酸鹽和壬基酚乙氧基化物",
+      "n_words": 17,
+      "n_unique_morphemes": 15,
+      "umr": 0.8824,
+      "ttr": 1.0,
+      "sfs": 1.875,
+      "n_tokens": 30,
+      "diversity_score": 0.6653
+    },
+    {
+      "text": "1210年：神聖羅馬皇帝奧托四世宣布廢除沃爾姆斯宗教協定後遭到教宗依諾增爵三世下令逐出教會。",
+      "n_words": 23,
+      "n_unique_morphemes": 20,
+      "umr": 0.8696,
+      "ttr": 1.0,
+      "sfs": 2.1579,
+      "n_tokens": 41,
+      "diversity_score": 0.6698
+    },
+    {
+      "text": "山东省济南市泉城广场、河南省开封市滨河路有李清照的全身雕像。",
+      "n_words": 14,
+      "n_unique_morphemes": 12,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 1.6667,
+      "n_tokens": 20,
+      "diversity_score": 0.6496
+    },
+    {
+      "text": "《鐵達尼號》奪得11項奧斯卡金像獎，平影史紀錄。",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6245
+    },
+    {
+      "text": "皇家马德里公布09-10财年报表 球场失意经济强势收入超4亿",
+      "n_words": 16,
+      "n_unique_morphemes": 12,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 2.0833,
+      "n_tokens": 25,
+      "diversity_score": 0.6245
+    },
+    {
+      "text": "年羹尧先后被任命为川陕总督、抚远大将军，赴青海征讨厄鲁特罗卜藏丹津叛乱。",
+      "n_words": 20,
+      "n_unique_morphemes": 17,
+      "umr": 0.85,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 32,
+      "diversity_score": 0.6577
+    },
+    {
+      "text": "山东孟良崮战役园区大门前矗立着陈毅元帅与粟裕大将的巨石塑像。",
+      "n_words": 16,
+      "n_unique_morphemes": 15,
+      "umr": 0.9375,
+      "ttr": 1.0,
+      "sfs": 1.7333,
+      "n_tokens": 26,
+      "diversity_score": 0.6806
+    },
+    {
+      "text": "開府儀同三司、尚書右僕射、申國公高士廉",
+      "n_words": 10,
+      "n_unique_morphemes": 8,
+      "umr": 0.8,
+      "ttr": 0.9,
+      "sfs": 2.8571,
+      "n_tokens": 20,
+      "diversity_score": 0.6202
+    },
+    {
+      "text": "1991年：波斯灣戰爭展開地面戰，連串攻勢令伊拉克部隊潰不成軍。",
+      "n_words": 19,
+      "n_unique_morphemes": 15,
+      "umr": 0.7895,
+      "ttr": 1.0,
+      "sfs": 2.0714,
+      "n_tokens": 29,
+      "diversity_score": 0.6383
+    },
+    {
+      "text": "朱曼鈴：財經事務及庫務局常任秘書長（庫務）",
+      "n_words": 8,
+      "n_unique_morphemes": 5,
+      "umr": 0.625,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6181
+    },
+    {
+      "text": "臺北金馬影展執行委員會主辦的「影史百大華語電影」獲選為第四名",
+      "n_words": 18,
+      "n_unique_morphemes": 16,
+      "umr": 0.8889,
+      "ttr": 1.0,
+      "sfs": 2.0769,
+      "n_tokens": 27,
+      "diversity_score": 0.6741
+    },
+    {
+      "text": "如果以一支小型望遠鏡去觀察獵戶座就能看到更多有趣的深空天體。",
+      "n_words": 19,
+      "n_unique_morphemes": 18,
+      "umr": 0.9474,
+      "ttr": 1.0,
+      "sfs": 1.2222,
+      "n_tokens": 22,
+      "diversity_score": 0.6677
+    },
+    {
+      "text": "2015年設立尖端材料科學學士學位學程、航空太空工程學系研究所碩士在職專班。",
+      "n_words": 19,
+      "n_unique_morphemes": 16,
+      "umr": 0.8421,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 32,
+      "diversity_score": 0.6549
+    },
+    {
+      "text": "长春天定山滑雪场：位于长春市莲花山生态旅游度假区，总占地面积80万平方米。",
+      "n_words": 16,
+      "n_unique_morphemes": 12,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 1.8333,
+      "n_tokens": 22,
+      "diversity_score": 0.6165
+    },
+    {
+      "text": "重刊續武經總要明趙本學、俞大猷所撰版本，網際網路檔案館中的線上閱讀頁面。",
+      "n_words": 21,
+      "n_unique_morphemes": 18,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 1.6667,
+      "n_tokens": 30,
+      "diversity_score": 0.6496
+    },
+    {
+      "text": "袁世凱 輯，新建陸軍兵略錄存，光緒二十四年排印本",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 0.9167,
+      "sfs": 2.0909,
+      "n_tokens": 23,
+      "diversity_score": 0.6154
+    },
+    {
+      "text": "3月11日，官方即正式宣佈施丹回歸球隊重新擔任球隊領隊一職。",
+      "n_words": 23,
+      "n_unique_morphemes": 19,
+      "umr": 0.8261,
+      "ttr": 1.0,
+      "sfs": 1.9286,
+      "n_tokens": 27,
+      "diversity_score": 0.6468
+    },
+    {
+      "text": "1982年：叶甫根尼·普鲁申科，俄羅斯男子單人花式滑冰選手",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 1.0,
+      "sfs": 2.8,
+      "n_tokens": 28,
+      "diversity_score": 0.6415
+    },
+    {
+      "text": "根据《中国人民政治协商会议章程》规定，中国人民政治协商会议全国委员会下设若干专门委员会。现设有10个",
+      "n_words": 17,
+      "n_unique_morphemes": 12,
+      "umr": 0.7059,
+      "ttr": 1.0,
+      "sfs": 2.25,
+      "n_tokens": 27,
+      "diversity_score": 0.614
+    },
+    {
+      "text": "民主進步黨籍立法委員吳秉叡事後對行政院提出「應否廢止中樞祭黃帝陵典」的質詢。",
+      "n_words": 25,
+      "n_unique_morphemes": 22,
+      "umr": 0.88,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 36,
+      "diversity_score": 0.6685
+    },
+    {
+      "text": "臧克家作品欣賞 (劉增人、馮光廉) 1988，廣西教育出版社",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 1.0,
+      "sfs": 3.25,
+      "n_tokens": 26,
+      "diversity_score": 0.6135
+    },
+    {
+      "text": "神武天皇七十六年三月十一日，天皇崩于橿原宮。",
+      "n_words": 14,
+      "n_unique_morphemes": 12,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 2.1,
+      "n_tokens": 21,
+      "diversity_score": 0.6635
+    },
+    {
+      "text": "尹汉辉（地质学家，为中華人民共和国第一颗原子弹爆炸成功立下汗马功劳）",
+      "n_words": 14,
+      "n_unique_morphemes": 11,
+      "umr": 0.7857,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.6404
+    },
+    {
+      "text": "塔利班领导人穆罕默德·奥马尔率领800名战士在阿南部露面。",
+      "n_words": 14,
+      "n_unique_morphemes": 11,
+      "umr": 0.7857,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.6404
+    },
+    {
+      "text": "馮保：司礼监秉笔太监，提督东厂兼掌御马监事。",
+      "n_words": 13,
+      "n_unique_morphemes": 10,
+      "umr": 0.7692,
+      "ttr": 1.0,
+      "sfs": 2.4444,
+      "n_tokens": 22,
+      "diversity_score": 0.6429
+    },
+    {
+      "text": "1994年：奧地利一級方程式賽車車手羅蘭德·拉岑伯格在聖馬利諾大獎賽排位賽中失事身亡。",
+      "n_words": 22,
+      "n_unique_morphemes": 17,
+      "umr": 0.7727,
+      "ttr": 1.0,
+      "sfs": 2.5625,
+      "n_tokens": 41,
+      "diversity_score": 0.648
+    },
+    {
+      "text": "1986年：哈薩克蘇維埃社會主義共和國發生傑勒托克桑事件釀成流血衝突。",
+      "n_words": 17,
+      "n_unique_morphemes": 14,
+      "umr": 0.8235,
+      "ttr": 1.0,
+      "sfs": 2.2143,
+      "n_tokens": 31,
+      "diversity_score": 0.6551
+    },
+    {
+      "text": "1978年：埃曼努埃爾·奥利萨德貝，奈及利亞裔波蘭職業足球運動員",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 1.0,
+      "sfs": 2.7273,
+      "n_tokens": 30,
+      "diversity_score": 0.6391
+    },
+    {
+      "text": "明朝嘉靖、萬曆年間南北監刻二十一史本（簡稱「監本」）",
+      "n_words": 17,
+      "n_unique_morphemes": 12,
+      "umr": 0.7059,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.6118
+    },
+    {
+      "text": "2015年：台湾國道三號发生爆胎翻車墜橋事故，致六死一傷。",
+      "n_words": 16,
+      "n_unique_morphemes": 12,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 2.4545,
+      "n_tokens": 27,
+      "diversity_score": 0.6364
+    },
+    {
+      "text": "康熙帝也曾钦赐给岳飞23世裔孙、刑部掌印岳镇九伴朝銮驾和蟒服。",
+      "n_words": 19,
+      "n_unique_morphemes": 16,
+      "umr": 0.8421,
+      "ttr": 1.0,
+      "sfs": 1.8125,
+      "n_tokens": 29,
+      "diversity_score": 0.6488
+    },
+    {
+      "text": "狄更斯在考慮極將邁上斷頭台的卡頓最後預言性願景作為故事結尾：",
+      "n_words": 18,
+      "n_unique_morphemes": 17,
+      "umr": 0.9444,
+      "ttr": 1.0,
+      "sfs": 1.6875,
+      "n_tokens": 27,
+      "diversity_score": 0.6816
+    },
+    {
+      "text": "1991年：澳洲女王伊莉莎白二世簽署專利特許證，允許獨自創設自己的維多利亞十字勳章。",
+      "n_words": 24,
+      "n_unique_morphemes": 20,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 2.1111,
+      "n_tokens": 38,
+      "diversity_score": 0.6553
+    },
+    {
+      "text": "1858年天津条约签订后英国驻华公使卜鲁斯多次宣布不许太平军进入上海，否则武力相见，还命令驻沪领事不准收受太平天国的公私函件。",
+      "n_words": 32,
+      "n_unique_morphemes": 28,
+      "umr": 0.875,
+      "ttr": 0.9688,
+      "sfs": 1.6786,
+      "n_tokens": 47,
+      "diversity_score": 0.6417
+    },
+    {
+      "text": "粵劇折子戲《絕情谷底俠侶情》改編自絕情谷一段，作者撰曲是陳錦榮女士。",
+      "n_words": 21,
+      "n_unique_morphemes": 16,
+      "umr": 0.7619,
+      "ttr": 1.0,
+      "sfs": 2.0588,
+      "n_tokens": 35,
+      "diversity_score": 0.628
+    },
+    {
+      "text": "香港電台《頭條新聞》經常借不同影視節目來惡搞：例如",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 1.8182,
+      "n_tokens": 20,
+      "diversity_score": 0.6339
+    },
+    {
+      "text": "吴猎：敷文阁直学士，四川安抚制置使兼知成都府。",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 1.8182,
+      "n_tokens": 20,
+      "diversity_score": 0.6339
+    },
+    {
+      "text": "砵甸乍任內以莊士敦樓（即前終審法院）為官邸。",
+      "n_words": 18,
+      "n_unique_morphemes": 15,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 1.9091,
+      "n_tokens": 21,
+      "diversity_score": 0.6488
+    },
+    {
+      "text": "2012年：获马来西亚霹雳州苏丹阿茲蘭沙殿下赐封拿督斯里勋衔。",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 2.5455,
+      "n_tokens": 28,
+      "diversity_score": 0.6572
+    },
+    {
+      "text": "缝合结膜，并在角巩膜缘处保留一个空白带，此处须用电烧烧灼",
+      "n_words": 18,
+      "n_unique_morphemes": 16,
+      "umr": 0.8889,
+      "ttr": 0.9444,
+      "sfs": 1.375,
+      "n_tokens": 22,
+      "diversity_score": 0.6255
+    },
+    {
+      "text": "1984年：香港政府發表代議政制綠皮書，建議在立法局逐步加入民選議席。",
+      "n_words": 18,
+      "n_unique_morphemes": 14,
+      "umr": 0.7778,
+      "ttr": 1.0,
+      "sfs": 2.5455,
+      "n_tokens": 28,
+      "diversity_score": 0.6492
+    },
+    {
+      "text": "順德公主，母恭让章皇后胡氏。正统二年下嫁石璟。",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 0.9333,
+      "sfs": 1.9091,
+      "n_tokens": 21,
+      "diversity_score": 0.6055
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "label": "B_GPTQ",
+  "model_path": "/home/choihyun/workspace/quantized_models/SOLAR_10.7B_4bit_cond_B",
+  "quantized": true,
+  "vram_used_mib": 22493,
+  "load_time_s": 35.91,
+  "num_prompts": 32,
+  "total_output_tokens": 6960,
+  "infer_time_s": 14.07,
+  "throughput_tok_per_sec": 494.5,
+  "avg_latency_ms": 439.8
+}
