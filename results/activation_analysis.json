@@ -1382,5 +1382,351 @@
         "channel_cv": 0.709452
       }
     }
+  },
+  "A": {
+    "summary": {
+      "mean_outlier_ratio": 0.000127,
+      "mean_entropy": 1.03396,
+      "mean_channel_cv": 7.565774,
+      "mean_std": 0.908097
+    },
+    "per_layer": {
+      "0": {
+        "mean": -2.8e-05,
+        "std": 0.012738,
+        "outlier_ratio": 0.0,
+        "entropy": 0.695646,
+        "channel_cv": 0.779719
+      },
+      "1": {
+        "mean": -0.001231,
+        "std": 0.897245,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.700316,
+        "channel_cv": 25.553672
+      },
+      "2": {
+        "mean": -0.001266,
+        "std": 0.897351,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.701587,
+        "channel_cv": 23.246207
+      },
+      "3": {
+        "mean": -0.001311,
+        "std": 0.897504,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.702659,
+        "channel_cv": 20.766273
+      },
+      "4": {
+        "mean": -0.001332,
+        "std": 0.89774,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.704514,
+        "channel_cv": 18.515623
+      },
+      "5": {
+        "mean": -0.001364,
+        "std": 0.898059,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.706515,
+        "channel_cv": 16.3648
+      },
+      "6": {
+        "mean": -0.001403,
+        "std": 0.898477,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.710425,
+        "channel_cv": 14.66608
+      },
+      "7": {
+        "mean": -0.001469,
+        "std": 0.898964,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.715544,
+        "channel_cv": 13.226934
+      },
+      "8": {
+        "mean": -0.001532,
+        "std": 0.899434,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.720427,
+        "channel_cv": 12.240543
+      },
+      "9": {
+        "mean": -0.001509,
+        "std": 0.900625,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.726818,
+        "channel_cv": 11.328694
+      },
+      "10": {
+        "mean": -0.001533,
+        "std": 0.901245,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.734158,
+        "channel_cv": 10.535498
+      },
+      "11": {
+        "mean": -0.001415,
+        "std": 0.901934,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.743587,
+        "channel_cv": 9.89453
+      },
+      "12": {
+        "mean": -0.001581,
+        "std": 0.902561,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.751859,
+        "channel_cv": 9.362098
+      },
+      "13": {
+        "mean": -0.001732,
+        "std": 0.903482,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.761385,
+        "channel_cv": 8.753988
+      },
+      "14": {
+        "mean": -0.001822,
+        "std": 0.90534,
+        "outlier_ratio": 2.9e-05,
+        "entropy": 0.773426,
+        "channel_cv": 8.277613
+      },
+      "15": {
+        "mean": -0.00205,
+        "std": 0.906848,
+        "outlier_ratio": 3e-05,
+        "entropy": 0.78774,
+        "channel_cv": 7.613211
+      },
+      "16": {
+        "mean": -0.002356,
+        "std": 0.90875,
+        "outlier_ratio": 3.3e-05,
+        "entropy": 0.807066,
+        "channel_cv": 7.056716
+      },
+      "17": {
+        "mean": -0.002694,
+        "std": 0.910826,
+        "outlier_ratio": 4.6e-05,
+        "entropy": 0.824031,
+        "channel_cv": 6.701507
+      },
+      "18": {
+        "mean": -0.003272,
+        "std": 0.913888,
+        "outlier_ratio": 9.8e-05,
+        "entropy": 0.83503,
+        "channel_cv": 6.519975
+      },
+      "19": {
+        "mean": -0.003797,
+        "std": 0.920911,
+        "outlier_ratio": 0.000211,
+        "entropy": 0.845522,
+        "channel_cv": 6.382999
+      },
+      "20": {
+        "mean": -0.00446,
+        "std": 0.925549,
+        "outlier_ratio": 0.000276,
+        "entropy": 0.845986,
+        "channel_cv": 6.382185
+      },
+      "21": {
+        "mean": -0.004604,
+        "std": 0.926941,
+        "outlier_ratio": 0.000292,
+        "entropy": 0.843441,
+        "channel_cv": 6.427826
+      },
+      "22": {
+        "mean": -0.004691,
+        "std": 0.926856,
+        "outlier_ratio": 0.000287,
+        "entropy": 0.8459,
+        "channel_cv": 6.390426
+      },
+      "23": {
+        "mean": -0.001366,
+        "std": 0.913082,
+        "outlier_ratio": 3e-05,
+        "entropy": 0.84486,
+        "channel_cv": 6.365835
+      },
+      "24": {
+        "mean": -0.001,
+        "std": 0.911382,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.825949,
+        "channel_cv": 6.638775
+      },
+      "25": {
+        "mean": -0.000965,
+        "std": 0.911079,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.819428,
+        "channel_cv": 6.763028
+      },
+      "26": {
+        "mean": -0.001088,
+        "std": 0.911088,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.817647,
+        "channel_cv": 6.794949
+      },
+      "27": {
+        "mean": -0.001008,
+        "std": 0.91056,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.81828,
+        "channel_cv": 6.795833
+      },
+      "28": {
+        "mean": -0.001165,
+        "std": 0.910794,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.821783,
+        "channel_cv": 6.751094
+      },
+      "29": {
+        "mean": -0.001235,
+        "std": 0.911453,
+        "outlier_ratio": 2.8e-05,
+        "entropy": 0.830634,
+        "channel_cv": 6.585947
+      },
+      "30": {
+        "mean": -0.001316,
+        "std": 0.912387,
+        "outlier_ratio": 3e-05,
+        "entropy": 0.842563,
+        "channel_cv": 6.451372
+      },
+      "31": {
+        "mean": -0.001442,
+        "std": 0.913085,
+        "outlier_ratio": 3.1e-05,
+        "entropy": 0.864731,
+        "channel_cv": 6.138725
+      },
+      "32": {
+        "mean": -0.001719,
+        "std": 0.915511,
+        "outlier_ratio": 3.6e-05,
+        "entropy": 0.904461,
+        "channel_cv": 5.718609
+      },
+      "33": {
+        "mean": -0.001721,
+        "std": 0.919697,
+        "outlier_ratio": 5e-05,
+        "entropy": 0.962527,
+        "channel_cv": 5.213179
+      },
+      "34": {
+        "mean": -0.002037,
+        "std": 0.924732,
+        "outlier_ratio": 6.7e-05,
+        "entropy": 1.039996,
+        "channel_cv": 4.690187
+      },
+      "35": {
+        "mean": -0.002415,
+        "std": 0.936201,
+        "outlier_ratio": 8.5e-05,
+        "entropy": 1.155294,
+        "channel_cv": 4.085421
+      },
+      "36": {
+        "mean": -0.002983,
+        "std": 0.945185,
+        "outlier_ratio": 0.000118,
+        "entropy": 1.259475,
+        "channel_cv": 3.633552
+      },
+      "37": {
+        "mean": -0.003444,
+        "std": 0.953685,
+        "outlier_ratio": 0.000157,
+        "entropy": 1.344262,
+        "channel_cv": 3.311136
+      },
+      "38": {
+        "mean": -0.004012,
+        "std": 0.963096,
+        "outlier_ratio": 0.000199,
+        "entropy": 1.420692,
+        "channel_cv": 3.051471
+      },
+      "39": {
+        "mean": -0.004608,
+        "std": 0.973688,
+        "outlier_ratio": 0.000237,
+        "entropy": 1.496915,
+        "channel_cv": 2.818878
+      },
+      "40": {
+        "mean": -0.004859,
+        "std": 0.984505,
+        "outlier_ratio": 0.000256,
+        "entropy": 1.573992,
+        "channel_cv": 2.601698
+      },
+      "41": {
+        "mean": -0.004659,
+        "std": 0.996519,
+        "outlier_ratio": 0.000274,
+        "entropy": 1.647918,
+        "channel_cv": 2.411821
+      },
+      "42": {
+        "mean": -0.004535,
+        "std": 1.010246,
+        "outlier_ratio": 0.000284,
+        "entropy": 1.726787,
+        "channel_cv": 2.232074
+      },
+      "43": {
+        "mean": -0.004564,
+        "std": 1.028007,
+        "outlier_ratio": 0.000319,
+        "entropy": 1.807454,
+        "channel_cv": 2.057146
+      },
+      "44": {
+        "mean": -0.00439,
+        "std": 1.046422,
+        "outlier_ratio": 0.000312,
+        "entropy": 1.905701,
+        "channel_cv": 1.865806
+      },
+      "45": {
+        "mean": -0.006206,
+        "std": 1.086915,
+        "outlier_ratio": 0.000423,
+        "entropy": 2.023917,
+        "channel_cv": 1.66249
+      },
+      "46": {
+        "mean": -0.006239,
+        "std": 0.889692,
+        "outlier_ratio": 0.000537,
+        "entropy": 2.137506,
+        "channel_cv": 0.950198
+      },
+      "47": {
+        "mean": -0.006721,
+        "std": 0.856355,
+        "outlier_ratio": 0.000833,
+        "entropy": 2.253711,
+        "channel_cv": 0.580799
+      }
+    }
   }
 }

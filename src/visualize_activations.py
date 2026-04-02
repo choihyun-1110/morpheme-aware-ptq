@@ -45,22 +45,43 @@ DATA_PATH   = "/home/choihyun/workspace/results/activation_analysis.json"
 OUT_DIR     = "/home/choihyun/workspace/results"
 
 COND_COLORS = {
-    "B":    "#4e79a7",   # 파랑 — 한국어 랜덤
-    "C":    "#f28e2b",   # 주황 — 원본 C
-    "C_v3": "#e15759",   # 빨강 — 형태소 다양성 (핵심)
-    "C_v4": "#76b7b2",   # 청록 — C_v4
+    "A":         "#59a14f",   # 초록 — 영어 랜덤
+    "B":         "#4e79a7",   # 파랑 — 한국어 랜덤
+    "C":         "#f28e2b",   # 주황 — 원본 C
+    "C_v3":      "#e15759",   # 빨강 — 형태소 다양성 (핵심)
+    "C_v4":      "#76b7b2",   # 청록 — C_v4
+    "C_zh":      "#b07aa1",   # 보라 — 중국어
+    "C_v3_eeve": "#ff9da7",   # 연한 빨강 — EEVE tokenizer
 }
 COND_LABELS = {
-    "B":    "B (한국어 랜덤)",
-    "C":    "C (원본)",
-    "C_v3": "C_v3 (형태소 다양성) ★",
-    "C_v4": "C_v4 (어절 확장)",
+    "A":         "A (English Random)",
+    "B":         "B (Korean Random)",
+    "C":         "C (Original)",
+    "C_v3":      "C_v3 (Morpheme Diversity) ★",
+    "C_v4":      "C_v4 (Extended)",
+    "C_zh":      "C_zh (Chinese)",
+    "C_v3_eeve": "C_v3_eeve (EEVE tok)",
+}
+COND_LABELS_KO = {
+    "A":         "A (영어 랜덤)",
+    "B":         "B (한국어 랜덤)",
+    "C":         "C (원본)",
+    "C_v3":      "C_v3 (형태소 다양성) ★",
+    "C_v4":      "C_v4 (어절 확장)",
+    "C_zh":      "C_zh (중국어)",
+    "C_v3_eeve": "C_v3_eeve (EEVE tok)",
 }
 
 METRIC_META = {
+    "channel_cv":    ("Channel CV", "Higher = more channel imbalance → challenging for GPTQ"),
+    "std":           ("Activation Std", "Higher = more outlier risk"),
+    "outlier_ratio": ("Outlier Ratio (|x|>6)", "Higher = larger quantization error"),
+    "entropy":       ("Activation Entropy", "Higher = more diverse activation patterns"),
+}
+METRIC_META_KO = {
     "channel_cv":    ("Channel CV (채널간 변동계수)", "높을수록 채널 불균형 → GPTQ에 도전적"),
     "std":           ("Activation Std (표준편차)",    "높을수록 outlier 위험 증가"),
-    "outlier_ratio": ("Outlier Ratio (|x|>3σ 비율)", "높을수록 quantization 오차 큼"),
+    "outlier_ratio": ("Outlier Ratio (|x|>6 비율)", "높을수록 quantization 오차 큼"),
     "entropy":       ("Entropy (활성 다양성)",        "높을수록 다양한 activation 패턴"),
 }
 
@@ -533,10 +554,137 @@ def make_radar(conds, summaries):
     print(f"[저장] {out}")
 
 
+def make_paper_figure(conds, layers, data, summaries, lang="en"):
+    """
+    논문 제출용 단일-패널 Figure.
+
+    상단: Channel CV per-layer (전체 48 레이어) — 핵심 발견
+    하단: Outlier Ratio per-layer + Summary 막대 비교 (inset)
+
+    lang="en"  → 영문 라벨 (학술지 제출용)
+    lang="ko"  → 한국어 라벨 (보고서용)
+    """
+    _apply_korean_font()
+    sns.set_style("whitegrid")
+    if lang == "ko":
+        labels = COND_LABELS_KO
+        metric_meta = METRIC_META_KO
+        title_cv   = "레이어별 Channel Coefficient of Variation (Channel CV)"
+        title_out  = "레이어별 Outlier Ratio (|activation| > 6)"
+        xlabel     = "Transformer Layer Index"
+        ylabel_cv  = "Channel CV"
+        ylabel_out = "Outlier Ratio"
+        note = "음영 구역: Core-A (L12–18)는 calibration 언어에 가장 민감한 구간"
+    else:
+        labels = COND_LABELS
+        metric_meta = METRIC_META
+        title_cv   = "Per-layer Channel CV of Hidden Activations"
+        title_out  = "Per-layer Outlier Ratio (|activation| > 6)"
+        xlabel     = "Transformer Layer Index"
+        ylabel_cv  = "Channel CV"
+        ylabel_out = "Outlier Ratio"
+        note = "Shaded region (Core-A, L12–18): most sensitive to calibration language"
+
+    fig = plt.figure(figsize=(10, 7), dpi=200)
+    gs  = gridspec.GridSpec(2, 1, figure=fig, hspace=0.42)
+    ax0 = fig.add_subplot(gs[0])   # Channel CV
+    ax1 = fig.add_subplot(gs[1])   # Outlier Ratio
+
+    # ── 색상/스타일 설정 ──────────────────────────────────────────
+    LINESTYLES = {"A": "--", "B": "-", "C": ":", "C_v3": "-", "C_v4": ":", "C_zh": "-.", "C_v3_eeve": "-."}
+    LINEWIDTHS = {"C_v3": 2.2, "B": 1.6}
+    ALPHAS     = {"C_v3": 1.0, "B": 0.85}
+
+    def _style(cond):
+        color = COND_COLORS.get(cond, "#aaa")
+        ls    = LINESTYLES.get(cond, "-")
+        lw    = LINEWIDTHS.get(cond, 1.4)
+        alpha = ALPHAS.get(cond, 0.75)
+        return dict(color=color, linestyle=ls, linewidth=lw, alpha=alpha)
+
+    # ── Core-A 구역 강조 (L12-18) ─────────────────────────────────
+    for ax in [ax0, ax1]:
+        ax.axvspan(11.5, 18.5, color="#fdedec", alpha=0.45, zorder=0, label="_nolegend_")
+        ax.axvline(11.5, color="#e15759", linewidth=0.6, linestyle=":", alpha=0.5, zorder=1)
+        ax.axvline(18.5, color="#e15759", linewidth=0.6, linestyle=":", alpha=0.5, zorder=1)
+
+    # ── Channel CV ──────────────────────────────────────────────────
+    for cond in conds:
+        ax0.plot(layers, data["channel_cv"][cond],
+                 label=labels.get(cond, cond), **_style(cond))
+    ax0.set_title(title_cv, fontsize=10, fontweight="bold", pad=6)
+    ax0.set_ylabel(ylabel_cv, fontsize=9)
+    ax0.set_xlim(-0.5, len(layers) - 0.5)
+    ax0.tick_params(labelsize=8)
+    ax0.legend(fontsize=7.5, ncol=min(len(conds), 4),
+               loc="upper right", framealpha=0.85)
+    ax0.text(15, ax0.get_ylim()[0], "Core-A\n(L12–18)",
+             ha="center", va="bottom", fontsize=7, color="#c0392b", alpha=0.7)
+
+    # ── Outlier Ratio ────────────────────────────────────────────────
+    for cond in conds:
+        ax1.plot(layers, data["outlier_ratio"][cond],
+                 label=labels.get(cond, cond), **_style(cond))
+    ax1.set_title(title_out, fontsize=10, fontweight="bold", pad=6)
+    ax1.set_xlabel(xlabel, fontsize=9)
+    ax1.set_ylabel(ylabel_out, fontsize=9)
+    ax1.set_xlim(-0.5, len(layers) - 0.5)
+    ax1.tick_params(labelsize=8)
+
+    # ── Summary 막대 inset (ax1 오른쪽 상단) ─────────────────────────
+    ax_ins = ax1.inset_axes([0.73, 0.42, 0.25, 0.52])
+    cond_bar = [c for c in conds if c in summaries]
+    xs = range(len(cond_bar))
+    bar_vals = [summaries[c]["mean_channel_cv"] for c in cond_bar]
+    bar_colors = [COND_COLORS.get(c, "#aaa") for c in cond_bar]
+    ax_ins.bar(xs, bar_vals, color=bar_colors, edgecolor="white", linewidth=0.5, width=0.65)
+    ax_ins.set_xticks(list(xs))
+    ax_ins.set_xticklabels(cond_bar, fontsize=6.5, rotation=30, ha="right")
+    ax_ins.set_ylabel("mean\nChannel CV", fontsize=6.5)
+    ax_ins.tick_params(axis="y", labelsize=6.5)
+    ax_ins.set_title("Summary", fontsize=7, pad=2)
+    for i, (x, v) in enumerate(zip(xs, bar_vals)):
+        ax_ins.text(x, v + 0.003, f"{v:.3f}", ha="center", fontsize=5.5)
+
+    # ── 주석 ─────────────────────────────────────────────────────────
+    fig.text(0.5, 0.01, note, ha="center", fontsize=7.5,
+             color="#555", style="italic")
+
+    sns.despine(fig=fig)
+    _apply_korean_font()
+    fig.patch.set_facecolor("white")
+
+    suffix = "ko" if lang == "ko" else "en"
+    out = os.path.join(OUT_DIR, f"activation_paper_{suffix}.png")
+    fig.savefig(out, dpi=200, bbox_inches="tight", facecolor="white")
+    plt.close(fig)
+    print(f"[저장] {out}")
+
+
 def main():
+    import argparse
+    _default_data    = "/home/choihyun/workspace/results/activation_analysis.json"
+    _default_out_dir = "/home/choihyun/workspace/results"
+    p = argparse.ArgumentParser()
+    p.add_argument("--data",       default=_default_data,    help="activation JSON 경로")
+    p.add_argument("--out-dir",    default=_default_out_dir)
+    p.add_argument("--paper-only", action="store_true",       help="논문용 figure만 생성")
+    p.add_argument("--lang",       default="en", choices=["en", "ko"])
+    args = p.parse_args()
+
+    # 런타임 경로로 모듈 변수 교체
+    global DATA_PATH, OUT_DIR
+    DATA_PATH = args.data
+    OUT_DIR   = args.out_dir
+
     print("데이터 로딩 중...")
     conds, layers, data, summaries = load_data(DATA_PATH)
     print(f"  조건: {conds}, 레이어 수: {len(layers)}")
+
+    if args.paper_only:
+        print(f"\n[논문용 figure ({args.lang})]...")
+        make_paper_figure(conds, layers, data, summaries, lang=args.lang)
+        return
 
     print("\n[1/4] 메인 대시보드 (4지표 × 레이어 + Summary 막대)...")
     make_dashboard(conds, layers, data, summaries)
@@ -550,12 +698,18 @@ def main():
     print("[4/4] Summary 레이더 차트...")
     make_radar(conds, summaries)
 
+    print("[5/5] 논문용 단일 패널 (English + Korean)...")
+    make_paper_figure(conds, layers, data, summaries, lang="en")
+    make_paper_figure(conds, layers, data, summaries, lang="ko")
+
     print("\n완료! 생성된 파일:")
     for fname in ["activation_dashboard.png", "activation_delta.png",
-                  "activation_channel_cv.png", "activation_radar.png"]:
+                  "activation_channel_cv.png", "activation_radar.png",
+                  "activation_paper_en.png", "activation_paper_ko.png"]:
         path = os.path.join(OUT_DIR, fname)
-        size = os.path.getsize(path) // 1024
-        print(f"  {path}  ({size} KB)")
+        if os.path.exists(path):
+            size = os.path.getsize(path) // 1024
+            print(f"  {path}  ({size} KB)")
 
 
 if __name__ == "__main__":
