@@ -1,0 +1,461 @@
+{
+  "results": {
+    "kobest_boolq": {
+      "name": "kobest_boolq",
+      "alias": "kobest_boolq",
+      "sample_len": 1404,
+      "acc,none": 0.8682336182336182,
+      "acc_stderr,none": 0.009030083656077936,
+      "f1,none": 0.8680729271160571,
+      "f1_stderr,none": "N/A"
+    },
+    "kobest_copa": {
+      "name": "kobest_copa",
+      "alias": "kobest_copa",
+      "sample_len": 1000,
+      "acc,none": 0.649,
+      "acc_stderr,none": 0.015100563798316403,
+      "f1,none": 0.6489575238603871,
+      "f1_stderr,none": "N/A"
+    },
+    "kobest_hellaswag": {
+      "name": "kobest_hellaswag",
+      "alias": "kobest_hellaswag",
+      "sample_len": 500,
+      "acc,none": 0.436,
+      "acc_stderr,none": 0.0221989546414768,
+      "f1,none": 0.4332676103428573,
+      "f1_stderr,none": "N/A",
+      "acc_norm,none": 0.526,
+      "acc_norm_stderr,none": 0.022352791650914163
+    },
+    "kobest_sentineg": {
+      "name": "kobest_sentineg",
+      "alias": "kobest_sentineg",
+      "sample_len": 397,
+      "acc,none": 0.5919395465994962,
+      "acc_stderr,none": 0.02469751959548553,
+      "f1,none": 0.5501510827597784,
+      "f1_stderr,none": "N/A"
+    },
+    "kobest_wic": {
+      "name": "kobest_wic",
+      "alias": "kobest_wic",
+      "sample_len": 1260,
+      "acc,none": 0.5523809523809524,
+      "acc_stderr,none": 0.014013956388252284,
+      "f1,none": 0.5158745513950693,
+      "f1_stderr,none": "N/A"
+    }
+  },
+  "group_subtasks": {},
+  "configs": {
+    "kobest_boolq": {
+      "task": "kobest_boolq",
+      "dataset_path": "skt/kobest_v1",
+      "dataset_name": "boolq",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "{{paragraph}} 질문: {{question}} 답변: ",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "아니오",
+        "예"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{paragraph}} 질문: {{question}} 답변: ",
+        "doc_to_choice": [
+          "아니오",
+          "예"
+        ],
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "f1",
+          "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+          "average": "macro",
+          "hf_evaluate": true,
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+        "autogptq": "gptq_model-4bit-128g.safetensors",
+        "trust_remote_code": true,
+        "config_source": "/home/choihyun/workspace/lm-evaluation-harness/lm_eval/tasks/kobest/kobest_boolq.yaml"
+      }
+    },
+    "kobest_copa": {
+      "task": "kobest_copa",
+      "dataset_path": "skt/kobest_v1",
+      "dataset_name": "copa",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "def copa_doc_to_text(doc: dict) -> str:\n    connector = {\"원인\": \" 왜냐하면\", \"결과\": \" 그래서\"}[doc[\"question\"].strip()]\n    return f\"\"\"{doc[\"premise\"]} {connector}\"\"\"\n",
+      "doc_to_target": "def copa_doc_to_target(doc: dict) -> str:\n    correct_choice = doc[\"alternative_1\"] if doc[\"label\"] == 0 else doc[\"alternative_2\"]\n    return f\"\"\"{correct_choice}\"\"\"\n",
+      "unsafe_code": false,
+      "doc_to_choice": "def copa_doc_to_choice(doc: dict) -> list:\n    return [f\"\"\"{doc[\"alternative_1\"]}\"\"\", f\"\"\"{doc[\"alternative_2\"]}\"\"\"]\n",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function copa_doc_to_text at 0x7ff314905f80>",
+        "doc_to_choice": "<function copa_doc_to_choice at 0x7ff314907420>",
+        "doc_to_target": "<function copa_doc_to_target at 0x7ff314905440>",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "f1",
+          "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+          "average": "macro",
+          "hf_evaluate": true,
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+        "autogptq": "gptq_model-4bit-128g.safetensors",
+        "trust_remote_code": true,
+        "config_source": "/home/choihyun/workspace/lm-evaluation-harness/lm_eval/tasks/kobest/kobest_copa.yaml"
+      }
+    },
+    "kobest_hellaswag": {
+      "task": "kobest_hellaswag",
+      "dataset_path": "skt/kobest_v1",
+      "dataset_name": "hellaswag",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "process_docs": "def hellaswag_process_doc(doc: Dataset) -> Dataset:\n    def preprocessor(dataset):\n        return {\n            \"query\": f\"\"\"문장: {dataset[\"context\"]}\"\"\",\n            \"choices\": [\n                dataset[\"ending_1\"],\n                dataset[\"ending_2\"],\n                dataset[\"ending_3\"],\n                dataset[\"ending_4\"],\n            ],\n            \"gold\": int(dataset[\"label\"]),\n        }\n\n    return doc.map(preprocessor)\n",
+      "doc_to_text": "{{query}}",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function hellaswag_process_doc at 0x7ff3149053a0>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{query}}",
+        "doc_to_choice": "choices",
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "f1",
+          "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+          "average": "macro",
+          "hf_evaluate": true,
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+        "autogptq": "gptq_model-4bit-128g.safetensors",
+        "trust_remote_code": true,
+        "config_source": "/home/choihyun/workspace/lm-evaluation-harness/lm_eval/tasks/kobest/kobest_hellaswag.yaml"
+      }
+    },
+    "kobest_sentineg": {
+      "task": "kobest_sentineg",
+      "dataset_path": "skt/kobest_v1",
+      "dataset_name": "sentineg",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "def sentineg_doc_to_text(doc: dict):\n    return f\"\"\"문장: {doc[\"sentence\"]} 긍부정:\"\"\"\n",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "부정",
+        "긍정"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function sentineg_doc_to_text at 0x7ff314907600>",
+        "doc_to_choice": [
+          "부정",
+          "긍정"
+        ],
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "f1",
+          "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+          "average": "macro",
+          "hf_evaluate": true,
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+        "autogptq": "gptq_model-4bit-128g.safetensors",
+        "trust_remote_code": true,
+        "config_source": "/home/choihyun/workspace/lm-evaluation-harness/lm_eval/tasks/kobest/kobest_sentineg.yaml"
+      }
+    },
+    "kobest_wic": {
+      "task": "kobest_wic",
+      "dataset_path": "skt/kobest_v1",
+      "dataset_name": "wic",
+      "training_split": "train",
+      "validation_split": "validation",
+      "test_split": "test",
+      "doc_to_text": "def wic_doc_to_text(doc: dict) -> str:\n    return f\"\"\"문장1: {doc[\"context_1\"]} 문장2: {doc[\"context_2\"]} 두 문장에서 {doc[\"word\"]}가 같은 뜻으로 쓰였나?\"\"\"\n",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": [
+        "아니오",
+        "예"
+      ],
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "<function wic_doc_to_text at 0x7ff3149054e0>",
+        "doc_to_choice": [
+          "아니오",
+          "예"
+        ],
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "f1",
+          "aggregation": "def macro_f1_score(items):\n    from sklearn.metrics import f1_score\n\n    unzipped_list = list(zip(*items))\n    golds = unzipped_list[0]\n    preds = unzipped_list[1]\n    fscore = f1_score(golds, preds, average=\"macro\")\n    return fscore\n",
+          "average": "macro",
+          "hf_evaluate": true,
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0,
+        "pretrained": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+        "autogptq": "gptq_model-4bit-128g.safetensors",
+        "trust_remote_code": true,
+        "config_source": "/home/choihyun/workspace/lm-evaluation-harness/lm_eval/tasks/kobest/kobest_wic.yaml"
+      }
+    }
+  },
+  "versions": {
+    "kobest_boolq": 1.0,
+    "kobest_copa": 1.0,
+    "kobest_hellaswag": 1.0,
+    "kobest_sentineg": 1.0,
+    "kobest_wic": 1.0
+  },
+  "n-shot": {
+    "kobest_boolq": 0,
+    "kobest_copa": 0,
+    "kobest_hellaswag": 0,
+    "kobest_sentineg": 0,
+    "kobest_wic": 0
+  },
+  "higher_is_better": {
+    "kobest_boolq": {
+      "acc": true,
+      "f1": true
+    },
+    "kobest_copa": {
+      "acc": true,
+      "f1": true
+    },
+    "kobest_hellaswag": {
+      "acc": true,
+      "acc_norm": true,
+      "f1": true
+    },
+    "kobest_sentineg": {
+      "acc": true,
+      "f1": true
+    },
+    "kobest_wic": {
+      "acc": true,
+      "f1": true
+    }
+  },
+  "n-samples": {
+    "kobest_boolq": {
+      "original": 1404,
+      "effective": 1404
+    },
+    "kobest_copa": {
+      "original": 1000,
+      "effective": 1000
+    },
+    "kobest_hellaswag": {
+      "original": 500,
+      "effective": 500
+    },
+    "kobest_sentineg": {
+      "original": 397,
+      "effective": 397
+    },
+    "kobest_wic": {
+      "original": 1260,
+      "effective": 1260
+    }
+  },
+  "config": {
+    "model": "hf",
+    "model_args": {
+      "pretrained": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+      "autogptq": "gptq_model-4bit-128g.safetensors",
+      "trust_remote_code": true
+    },
+    "model_num_parameters": 1090199040,
+    "model_dtype": "torch.float16",
+    "model_revision": "main",
+    "model_sha": "",
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": "cuda:0",
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": {},
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": null,
+  "date": 1773938373.990552,
+  "pretty_env_info": "PyTorch version: 2.10.0+cu128\nIs debug build: False\nCUDA used to build PyTorch: 12.8\nROCM used to build PyTorch: N/A\n\nOS: Ubuntu 22.04.3 LTS (x86_64)\nGCC version: (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0\nClang version: Could not collect\nCMake version: version 3.26.4\nLibc version: glibc-2.35\n\nPython version: 3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0] (64-bit runtime)\nPython platform: Linux-6.8.0-40-generic-x86_64-with-glibc2.35\nIs CUDA available: True\nCUDA runtime version: 12.1.105\nCUDA_MODULE_LOADING set to: \nGPU models and configuration: \nGPU 0: NVIDIA TITAN RTX\nGPU 1: NVIDIA TITAN RTX\n\nNvidia driver version: 550.120\ncuDNN version: Probably one of the following:\n/usr/lib/x86_64-linux-gnu/libcudnn.so.8.9.0\n/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.9.0\n/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.9.0\n/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.9.0\n/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.9.0\n/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.9.0\n/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.9.0\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nArchitecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               16\nOn-line CPU(s) list:                  0-15\nVendor ID:                            GenuineIntel\nModel name:                           12th Gen Intel(R) Core(TM) i5-12600K\nCPU family:                           6\nModel:                                151\nThread(s) per core:                   2\nCore(s) per socket:                   10\nSocket(s):                            1\nStepping:                             2\nCPU max MHz:                          4900.0000\nCPU min MHz:                          800.0000\nBogoMIPS:                             7372.80\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l2 cdp_l2 ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdt_a rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities\nVirtualization:                       VT-x\nL1d cache:                            416 KiB (10 instances)\nL1i cache:                            448 KiB (10 instances)\nL2 cache:                             9.5 MiB (7 instances)\nL3 cache:                             20 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-15\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Mitigation; Clear Register File\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] nvidia-cublas-cu12==12.8.4.1\n[pip3] nvidia-cuda-cupti-cu12==12.8.90\n[pip3] nvidia-cuda-nvrtc-cu12==12.8.93\n[pip3] nvidia-cuda-runtime-cu12==12.8.90\n[pip3] nvidia-cudnn-cu12==9.10.2.21\n[pip3] nvidia-cudnn-frontend==1.18.0\n[pip3] nvidia-cufft-cu12==11.3.3.83\n[pip3] nvidia-curand-cu12==10.3.9.90\n[pip3] nvidia-cusolver-cu12==11.7.3.90\n[pip3] nvidia-cusparse-cu12==12.5.8.93\n[pip3] nvidia-cusparselt-cu12==0.7.1\n[pip3] nvidia-nccl-cu12==2.27.5\n[pip3] nvidia-nvjitlink-cu12==12.8.93\n[pip3] nvidia-nvtx-cu12==12.8.90\n[pip3] torch==2.10.0\n[pip3] torch_c_dlpack_ext==0.1.5\n[pip3] torchaudio==2.10.0\n[pip3] torchvision==0.25.0\n[pip3] triton==3.6.0\n[conda] numpy                     2.2.6                    pypi_0    pypi\n[conda] nvidia-cublas-cu12        12.8.4.1                 pypi_0    pypi\n[conda] nvidia-cuda-cupti-cu12    12.8.90                  pypi_0    pypi\n[conda] nvidia-cuda-nvrtc-cu12    12.8.93                  pypi_0    pypi\n[conda] nvidia-cuda-runtime-cu12  12.8.90                  pypi_0    pypi\n[conda] nvidia-cudnn-cu12         9.10.2.21                pypi_0    pypi\n[conda] nvidia-cudnn-frontend     1.18.0                   pypi_0    pypi\n[conda] nvidia-cufft-cu12         11.3.3.83                pypi_0    pypi\n[conda] nvidia-curand-cu12        10.3.9.90                pypi_0    pypi\n[conda] nvidia-cusolver-cu12      11.7.3.90                pypi_0    pypi\n[conda] nvidia-cusparse-cu12      12.5.8.93                pypi_0    pypi\n[conda] nvidia-cusparselt-cu12    0.7.1                    pypi_0    pypi\n[conda] nvidia-nccl-cu12          2.27.5                   pypi_0    pypi\n[conda] nvidia-nvjitlink-cu12     12.8.93                  pypi_0    pypi\n[conda] nvidia-nvtx-cu12          12.8.90                  pypi_0    pypi\n[conda] torch                     2.10.0                   pypi_0    pypi\n[conda] torch-c-dlpack-ext        0.1.5                    pypi_0    pypi\n[conda] torchaudio                2.10.0                   pypi_0    pypi\n[conda] torchvision               0.25.0                   pypi_0    pypi\n[conda] triton                    3.6.0                    pypi_0    pypi",
+  "transformers_version": "4.57.6",
+  "lm_eval_version": "0.4.12.dev0",
+  "upper_git_hash": null,
+  "tokenizer_pad_token": [
+    "<|endoftext|>",
+    "151643"
+  ],
+  "tokenizer_eos_token": [
+    "<|im_end|>",
+    "151645"
+  ],
+  "tokenizer_bos_token": [
+    null,
+    "None"
+  ],
+  "eot_token_id": 151645,
+  "max_length": 32768,
+  "task_hashes": {
+    "kobest_boolq": "8f1bc7147ace1e3f52ed4bb9659f98cfb3dc7a258c2f55a729fb5a33257ac9f2",
+    "kobest_copa": "8b8ba95d2ce6c9c215c11780e20a8e6ac9f4823343d9575d2d6b3a676e93b538",
+    "kobest_hellaswag": "3da2ae986f04fe54b6c0844d94792a25f71eed2d510f5ae1da2e93946d0f25b0",
+    "kobest_sentineg": "d636e8e37ccc34f7f43234d244d2d18ea8fa27d08663ccbb74307d2e17d87c1c",
+    "kobest_wic": "7be5a5d2550940922d8a80705666e7350c5308e0015acc207329c6d7b8e6a6db"
+  },
+  "model_source": "hf",
+  "model_name": "/home/choihyun/workspace/quantized_models/qwen2_7b_cond_C_v3",
+  "model_name_sanitized": "__home__choihyun__workspace__quantized_models__qwen2_7b_cond_C_v3",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": null,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "total_evaluation_time_seconds": "3362.867394119967"
+}
