@@ -1,7 +1,6 @@
 # Sprint 4 방향성 및 갭 분석
 
 **작성일:** 2026-03-29
-**작성 주체:** Claude (외부 시점 분석)
 **기반 문서:** sprint_overview.md, sprint2/thoughts/12, 14, sprint3/thoughts/01, 05, 09, 10, backlog.md
 **외부 자료:** TurboQuant (ICLR 2026), Calibrating Beyond English (EACL 2026), FAQ (arXiv 2601.11200)
 
