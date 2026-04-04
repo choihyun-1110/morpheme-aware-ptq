@@ -30,16 +30,23 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from optimum.gptq import GPTQQuantizer
 
 
-def load_texts(json_path: str):
+def load_texts(json_path: str, seed: int = None):
+    import random
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     texts = [item["text"] for item in data["sentences"]]
-    print(f"[calibration] {len(texts)} 문장 로드 완료: {json_path}")
+    if seed is not None:
+        rng = random.Random(seed)
+        rng.shuffle(texts)
+        print(f"[calibration] {len(texts)} 문장 로드 완료 (seed={seed}): {json_path}")
+    else:
+        print(f"[calibration] {len(texts)} 문장 로드 완료: {json_path}")
     return texts
 
 
 def run_quantization(model_id: str, calibration_json: str, output_dir: str,
-                     bits: int = 4, group_size: int = 128, desc_act: bool = True):
+                     bits: int = 4, group_size: int = 128, desc_act: bool = True,
+                     seed: int = None):
     print(f"\n{'='*60}")
     print(f"[optimum.gptq] 양자화 시작: {model_id}")
     print(f"Calibration: {calibration_json}")
@@ -52,7 +59,7 @@ def run_quantization(model_id: str, calibration_json: str, output_dir: str,
     tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
 
     print("[2/4] Calibration 텍스트 로드 중...")
-    texts = load_texts(calibration_json)
+    texts = load_texts(calibration_json, seed=seed)
 
     print("[3/4] 원본 모델 로드 중 (FP16, CPU)...")
     # CPU 로드: optimum.gptq가 layer별로 GPU 이동 처리 → OOM 방지
@@ -127,6 +134,8 @@ if __name__ == "__main__":
     parser.add_argument("--bits", type=int, default=4)
     parser.add_argument("--group-size", type=int, default=128)
     parser.add_argument("--no-desc-act", action="store_true")
+    parser.add_argument("--seed", type=int, default=None,
+                        help="calibration 데이터 셔플 시드 (통계 검정용 분산 도입)")
     args = parser.parse_args()
 
     run_quantization(
@@ -136,4 +145,5 @@ if __name__ == "__main__":
         bits=args.bits,
         group_size=args.group_size,
         desc_act=not args.no_desc_act,
+        seed=args.seed,
     )

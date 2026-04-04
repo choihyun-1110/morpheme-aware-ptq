@@ -52,19 +52,22 @@ run_stat() {
     local calib_path="$1"
     local cond_name="$2"
     local run_idx="$3"
+    local seed="$4"          # 셔플 시드 (run마다 다름 → 분산 도입)
     local out_tag="${cond_name}_stat_run${run_idx}"
     local model_dir="${QUANT_MODELS}/solar_${out_tag}"
 
-    if [ -f "${RESULTS}/eval_kobest_solar_${out_tag}.json" ]; then
+    # 이미 결과 파일이 존재하면 스킵
+    if compgen -G "${RESULTS}/eval_kobest_solar_${out_tag}*.json" > /dev/null 2>&1; then
         log "[스킵] 이미 완료: ${out_tag}"
         return 0
     fi
 
-    log "=== [${out_tag}] 양자화 시작 ==="
+    log "=== [${out_tag}] 양자화 시작 (seed=${seed}) ==="
     "${PYTHON}" "${SRC}/run_quant_optimum.py" \
         --model "${MODEL}" \
         --calib-path "${calib_path}" \
         --out-dir "${model_dir}" \
+        --seed "${seed}" \
         2>&1 | tee "${RESULTS}/quant_solar_${out_tag}.log"
     log "양자화 완료: ${out_tag}"
 
@@ -76,17 +79,25 @@ run_stat() {
 }
 
 log "======================================================"
-log "Sprint 4 S4-1: SOLAR C_v3 vs B 통계 검정 (5회 런)"
+log "Sprint 4 S4-1: SOLAR C_v3 vs B 통계 검정 (5회 런, 셔플 시드 도입)"
 log "======================================================"
 
-# C_v3 5회
+# 기존 결과(seed 없이 돌려서 std=0인 것들) 삭제 후 재실행
+log "[정리] 기존 stat 결과 파일 삭제 중..."
+rm -f "${RESULTS}"/eval_kobest_solar_C_v3_stat_run*.json
+rm -f "${RESULTS}"/eval_kobest_solar_B_stat_run*.json
+log "[정리] 완료"
+
+# C_v3 5회 (seed 42,43,44,45,46)
 for i in 1 2 3 4 5; do
-    run_stat "${CALIB_Cv3}" "C_v3" "${i}"
+    seed=$((41 + i))
+    run_stat "${CALIB_Cv3}" "C_v3" "${i}" "${seed}"
 done
 
-# B 5회
+# B 5회 (동일한 seed 사용 → paired 비교 공정성 확보)
 for i in 1 2 3 4 5; do
-    run_stat "${CALIB_B}" "B" "${i}"
+    seed=$((41 + i))
+    run_stat "${CALIB_B}" "B" "${i}" "${seed}"
 done
 
 log "======================================================"

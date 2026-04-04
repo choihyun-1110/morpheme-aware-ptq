@@ -169,7 +169,8 @@ def compute_zh_diversity(scores: List[ZhScore]) -> List[ZhScore]:
 def filter_zh_candidates(scores: List[ZhScore],
                           min_words: int = 5,
                           min_tokens: int = 20,
-                          min_zh_ratio: float = 0.7) -> List[ZhScore]:
+                          min_zh_ratio: float = 0.7,
+                          min_sfs: float = 0.0) -> List[ZhScore]:
     filtered = []
     for s in scores:
         if s.n_words < min_words:
@@ -178,9 +179,11 @@ def filter_zh_candidates(scores: List[ZhScore],
             continue
         if zh_char_ratio(s.text) < min_zh_ratio:
             continue
+        if s.sfs < min_sfs:
+            continue
         filtered.append(s)
     print(f"[필터] {len(scores)} → {len(filtered)}개 (min_words={min_words}, "
-          f"min_zh_ratio={min_zh_ratio})")
+          f"min_zh_ratio={min_zh_ratio}, min_sfs={min_sfs})")
     return filtered
 
 
@@ -271,6 +274,8 @@ def main():
     parser.add_argument("--min-words", type=int, default=5)
     parser.add_argument("--min-tokens", type=int, default=20)
     parser.add_argument("--min-zh-ratio", type=float, default=0.7)
+    parser.add_argument("--min-sfs", type=float, default=0.0,
+                        help="C_zh_v3용: 최소 SFS 임계값 (높을수록 token-rich 문장만 선별)")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--suffix", type=str, default="zh")
     args = parser.parse_args()
@@ -299,6 +304,7 @@ def main():
         min_words=args.min_words,
         min_tokens=args.min_tokens,
         min_zh_ratio=args.min_zh_ratio,
+        min_sfs=args.min_sfs,
     )
     if len(scores) < args.n_sentences:
         raise ValueError(f"필터 후 후보 부족: {len(scores)} < {args.n_sentences}")
