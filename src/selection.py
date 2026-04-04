@@ -115,6 +115,7 @@ def greedy_diversity_select(candidates: List[SentenceScore],
                              alpha: float = 0.3,
                              beta: float = 0.15,
                              gamma: float = 0.15,
+                             delta: float = 0.0,
                              min_eojeols: int = 5,
                              target_eojeols: int = 12,
                              min_subword_tokens: int = 24,
@@ -133,6 +134,10 @@ def greedy_diversity_select(candidates: List[SentenceScore],
         alpha: 커버리지 보너스 계수 (높을수록 새 형태소 우선)
         beta: 길이 보너스 계수
         gamma: 문장 종결 보너스 계수
+        delta: token richness 보너스 계수 (C_v5+) — 문장 내 unique token 비율.
+               0이면 비활성(C_v3 동작 유지). 0.2 권장.
+               attention layer가 다양한 position을 처리하도록 within-sentence
+               token 다양성을 추가 보상함.
     Returns:
         selected: 선별된 n개 SentenceScore 리스트
     """
@@ -169,12 +174,21 @@ def greedy_diversity_select(candidates: List[SentenceScore],
             # 종결 어미/문장부호를 가진 문장에 소폭 보너스
             sentence_bonus = 1.0 if has_sentence_final_ending(cand) else 0.0
             
+            # token richness 보너스 (C_v5+): 문장 내 unique token 비율
+            # unique/total 비율이 높을수록 반복 없는 풍성한 문장
+            # → attention Q/K/V가 다양한 position/context에서 calibration됨
+            token_richness = (
+                len(set(cand.token_ids)) / len(cand.token_ids)
+                if cand.token_ids else 0.0
+            )
+
             # 최종 선택 점수
             final_score = (
                 base_score
                 + alpha * coverage_bonus
                 + beta * length_bonus
                 + gamma * sentence_bonus
+                + delta * token_richness
             )
             
             if final_score > best_score:

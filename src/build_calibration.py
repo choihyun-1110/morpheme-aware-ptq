@@ -97,6 +97,7 @@ def build_condition_C(candidate_pool, tokenizer, model_name: str,
                        alpha: float = 0.3,
                        beta: float = 0.15,
                        gamma: float = 0.15,
+                       delta: float = 0.0,
                        min_eojeols: int = 5,
                        min_subword_tokens: int = 24,
                        require_sentence_final: bool = True,
@@ -141,6 +142,7 @@ def build_condition_C(candidate_pool, tokenizer, model_name: str,
         alpha=alpha,
         beta=beta,
         gamma=gamma,
+        delta=delta,
         min_eojeols=min_eojeols,
         target_eojeols=target_eojeols,
         min_subword_tokens=min_subword_tokens,
@@ -197,6 +199,8 @@ def main():
                        help="길이 보너스 계수 (조건 C)")
     parser.add_argument("--gamma", type=float, default=0.15,
                        help="문장 종결 보너스 계수 (조건 C)")
+    parser.add_argument("--delta", type=float, default=0.0,
+                       help="token richness 보너스 계수 (C_v5+, 0이면 C_v3 동작 유지)")
     parser.add_argument("--c-min-eojeols", type=int, default=5,
                        help="조건 C 최소 어절 수")
     parser.add_argument("--c-min-tokens", type=int, default=24,
@@ -244,6 +248,7 @@ def main():
             alpha=args.alpha,
             beta=args.beta,
             gamma=args.gamma,
+            delta=args.delta,
             min_eojeols=args.c_min_eojeols,
             min_subword_tokens=args.c_min_tokens,
             require_sentence_final=not args.allow_fragments,

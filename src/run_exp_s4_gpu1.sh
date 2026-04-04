@@ -108,7 +108,9 @@ result_exists "eeve_10b_fp16"       && log "스킵: eeve_10b_fp16"       || log 
 # S4-4: C_v3_exaone 생성 + EXAONE35 재실험
 # ─────────────────────────────────────────────────────────
 log "=== [S4-4] C_v3_exaone calibration + EXAONE35 재실험 ==="
-CALIB_Cv3_EXAONE="${RESULTS}/calibration_set_C_v3_exaone_LGAI-EXAONE-3.5-7.8B-Instruct.json"
+# build_calibration.py는 model 경로 전체를 파일명에 넣으므로 glob으로 탐색
+CALIB_Cv3_EXAONE=$(ls "${RESULTS}"/calibration_set_C_*exaone*EXAONE*.json 2>/dev/null | head -1)
+CALIB_Cv3_EXAONE="${CALIB_Cv3_EXAONE:-${RESULTS}/calibration_set_C_v3_exaone_LGAI-EXAONE-3.5-7.8B-Instruct.json}"
 EXAONE_PATH=$(find_exaone_path)
 log "EXAONE 경로: ${EXAONE_PATH}"
 
