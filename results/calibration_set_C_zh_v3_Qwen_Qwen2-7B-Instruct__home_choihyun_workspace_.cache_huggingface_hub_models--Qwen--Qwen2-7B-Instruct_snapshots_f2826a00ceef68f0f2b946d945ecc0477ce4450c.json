@@ -1,0 +1,1303 @@
+{
+  "condition": "C_zh_morphology_diverse",
+  "model": "/home/choihyun/workspace/.cache/huggingface/hub/models--Qwen--Qwen2-7B-Instruct/snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+  "n_sentences": 128,
+  "n_unique_morphemes": 1076,
+  "avg_diversity_score": 0.6338,
+  "avg_sfs": 3.3789,
+  "avg_n_tokens": 25.55,
+  "params": {
+    "model": "/home/choihyun/workspace/.cache/huggingface/hub/models--Qwen--Qwen2-7B-Instruct/snapshots/f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+    "n_sentences": 128,
+    "n_candidates": 100000,
+    "alpha": 0.3,
+    "min_words": 5,
+    "min_tokens": 20,
+    "min_zh_ratio": 0.7,
+    "min_sfs": 3.0,
+    "seed": 42,
+    "suffix": "zh_v3_Qwen_Qwen2-7B-Instruct"
+  },
+  "sentences": [
+    {
+      "text": "政治学系    经济学系    法律学系   商学系   社会学系",
+      "n_words": 6,
+      "n_unique_morphemes": 6,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 4.1667,
+      "n_tokens": 25,
+      "diversity_score": 0.7816
+    },
+    {
+      "text": "内蒙古自治区呼伦贝尔市鄂温克族自治旗巴彦塔拉达斡尔民族乡",
+      "n_words": 6,
+      "n_unique_morphemes": 6,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.7549
+    },
+    {
+      "text": "唐高宗復封白訶黎布失畢為龜茲國王。",
+      "n_words": 15,
+      "n_unique_morphemes": 14,
+      "umr": 0.9333,
+      "ttr": 1.0,
+      "sfs": 4.0,
+      "n_tokens": 20,
+      "diversity_score": 0.7523
+    },
+    {
+      "text": "列传第五十九 忠義 嵇紹 从子嵇含 王豹 劉沈 麹允 附焦嵩 賈渾 王育 韋忠 辛勉 族弟辛賓 劉敏元 周該 桓雄 韓階 周崎 易雄 樂道融 虞悝 沈勁 吉挹 王諒 宋矩 車濟 丁穆 辛恭靖 羅企生 張禕",
+      "n_words": 39,
+      "n_unique_morphemes": 39,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.2432,
+      "n_tokens": 120,
+      "diversity_score": 0.7521
+    },
+    {
+      "text": "载记第二十八 南燕 慕容超 慕容鍾 封孚",
+      "n_words": 7,
+      "n_unique_morphemes": 7,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.7443
+    },
+    {
+      "text": "和布克赛尔蒙古自治县（新疆维吾尔自治区伊犁哈萨克自治州）",
+      "n_words": 5,
+      "n_unique_morphemes": 3,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 7.3333,
+      "n_tokens": 22,
+      "diversity_score": 0.7392
+    },
+    {
+      "text": "拜占庭帝國將軍貝利薩留從東哥特王國攻下那不勒斯及羅馬。",
+      "n_words": 14,
+      "n_unique_morphemes": 13,
+      "umr": 0.9286,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 27,
+      "diversity_score": 0.7187
+    },
+    {
+      "text": "上野國厩橋城城主北條高廣叛離上杉謙信，投靠北條氏康。",
+      "n_words": 16,
+      "n_unique_morphemes": 14,
+      "umr": 0.875,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 27,
+      "diversity_score": 0.6994
+    },
+    {
+      "text": "鄧達智： 香港時裝設計師，屏山鄧氏後人",
+      "n_words": 11,
+      "n_unique_morphemes": 9,
+      "umr": 0.8182,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.695
+    },
+    {
+      "text": "列传第三十三 邵續 李矩 段匹磾 魏浚 族子魏該 郭默",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 30,
+      "diversity_score": 0.7443
+    },
+    {
+      "text": "耶路撒冷聖墓騎士團勳章大十字騎士級（梵蒂岡）",
+      "n_words": 12,
+      "n_unique_morphemes": 10,
+      "umr": 0.8333,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6936
+    },
+    {
+      "text": "《侵華日軍在粵進行細菌戰之概況》 沙東迅",
+      "n_words": 14,
+      "n_unique_morphemes": 12,
+      "umr": 0.8571,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.693
+    },
+    {
+      "text": "漢藏語系  漢語族  閩語支  沿海閩語  閩南語",
+      "n_words": 10,
+      "n_unique_morphemes": 9,
+      "umr": 0.9,
+      "ttr": 0.9,
+      "sfs": 3.75,
+      "n_tokens": 30,
+      "diversity_score": 0.6879
+    },
+    {
+      "text": "列传第三十九 劉隗 孫劉波 伯父劉訥 刁協 子刁彝 彝子刁逵 戴若思（戴淵） 弟戴邈 周顗",
+      "n_words": 21,
+      "n_unique_morphemes": 19,
+      "umr": 0.9048,
+      "ttr": 1.0,
+      "sfs": 3.1333,
+      "n_tokens": 47,
+      "diversity_score": 0.7144
+    },
+    {
+      "text": "《罗曼采罗》 海涅著 钱春绮译 上海译文出版社",
+      "n_words": 9,
+      "n_unique_morphemes": 7,
+      "umr": 0.7778,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.6805
+    },
+    {
+      "text": "菲爾茲獎和奧斯瓦爾德·維布倫幾何學獎得主：",
+      "n_words": 10,
+      "n_unique_morphemes": 8,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6771
+    },
+    {
+      "text": "1984年：楊佳運，台灣搖滾樂團八三夭團長兼鍵盤手",
+      "n_words": 15,
+      "n_unique_morphemes": 12,
+      "umr": 0.8,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.6765
+    },
+    {
+      "text": "胞姊烏雅氏，嫁镶黄旗满洲一等公鈕祜祿氏阿靈阿 (鈕祜祿氏)。",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 35,
+      "diversity_score": 0.6645
+    },
+    {
+      "text": "至元二十三年 1286 学政刘必大重建，朱渤作记（无考）",
+      "n_words": 13,
+      "n_unique_morphemes": 9,
+      "umr": 0.6923,
+      "ttr": 1.0,
+      "sfs": 3.7143,
+      "n_tokens": 26,
+      "diversity_score": 0.6567
+    },
+    {
+      "text": "瑪·約伯耶和華三世，東方亞述教會中國籍牧首。",
+      "n_words": 12,
+      "n_unique_morphemes": 9,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6545
+    },
+    {
+      "text": "水夏希（前寶塚歌劇團雪組主演男役）：稻毛區",
+      "n_words": 12,
+      "n_unique_morphemes": 9,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6545
+    },
+    {
+      "text": "俄羅斯帝國海軍將領叶夫根尼·伊万诺维奇·阿列克谢耶夫是亚历山大二世的私生子。",
+      "n_words": 16,
+      "n_unique_morphemes": 13,
+      "umr": 0.8125,
+      "ttr": 0.9375,
+      "sfs": 3.0833,
+      "n_tokens": 37,
+      "diversity_score": 0.6519
+    },
+    {
+      "text": "望梅止渴，出自劉義慶筆記小說《世說新語·假譎》",
+      "n_words": 14,
+      "n_unique_morphemes": 10,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6463
+    },
+    {
+      "text": "《》（又名修習止觀坐禪法要、略明開矇初學坐禪止觀要門）",
+      "n_words": 18,
+      "n_unique_morphemes": 13,
+      "umr": 0.7222,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 30,
+      "diversity_score": 0.6446
+    },
+    {
+      "text": "中華民國商務印書館印張元濟輯《百衲本二十四史》",
+      "n_words": 7,
+      "n_unique_morphemes": 5,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6417
+    },
+    {
+      "text": "雅羅斯拉夫一世·弗拉基米羅維奇，基輔羅斯大公。",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6412
+    },
+    {
+      "text": "清朝理藩院、中華民國蒙藏委員會、中华人民共和国国家民族事务委员会",
+      "n_words": 11,
+      "n_unique_morphemes": 9,
+      "umr": 0.8182,
+      "ttr": 0.9091,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6386
+    },
+    {
+      "text": "德川家康（講談社、山岡莊八著・横山光輝畫）",
+      "n_words": 13,
+      "n_unique_morphemes": 9,
+      "umr": 0.6923,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6384
+    },
+    {
+      "text": "1984年：香港島銅鑼灣伊利沙伯大廈揭發花槽藏屍案。",
+      "n_words": 17,
+      "n_unique_morphemes": 14,
+      "umr": 0.8235,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 27,
+      "diversity_score": 0.6809
+    },
+    {
+      "text": "祖父鄧克達，勤勞、儉僕。祖母戴氏會紡紗織布。",
+      "n_words": 14,
+      "n_unique_morphemes": 10,
+      "umr": 0.7143,
+      "ttr": 0.9286,
+      "sfs": 3.8571,
+      "n_tokens": 27,
+      "diversity_score": 0.6374
+    },
+    {
+      "text": "穆罕默德·苏乡老：吉尔吉斯斯坦东干族语言学家。",
+      "n_words": 9,
+      "n_unique_morphemes": 6,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6353
+    },
+    {
+      "text": "中國技術服務社設立李國鼎╱金開英講座(1991)",
+      "n_words": 13,
+      "n_unique_morphemes": 9,
+      "umr": 0.6923,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6338
+    },
+    {
+      "text": "1996年：莎賓娜·艾媞博柯娃，哈薩克籍日本排球選手",
+      "n_words": 16,
+      "n_unique_morphemes": 12,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.6585
+    },
+    {
+      "text": "自治州：黔西南布依族苗族自治州、黔东南苗族侗族自治州、黔南布依族苗族自治州",
+      "n_words": 7,
+      "n_unique_morphemes": 4,
+      "umr": 0.5714,
+      "ttr": 0.8571,
+      "sfs": 6.25,
+      "n_tokens": 25,
+      "diversity_score": 0.6308
+    },
+    {
+      "text": "1996年黃秋生執導並演出浪漫喜劇《金裝香蕉俱樂部》。",
+      "n_words": 16,
+      "n_unique_morphemes": 12,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6545
+    },
+    {
+      "text": "卷五　　公孙述刘二牧志（公孫述，劉焉、劉璋）",
+      "n_words": 12,
+      "n_unique_morphemes": 8,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6292
+    },
+    {
+      "text": "2017 - 貓頭鷹在黃昏飛翔／川上未映子 問，村上春樹 答",
+      "n_words": 17,
+      "n_unique_morphemes": 13,
+      "umr": 0.7647,
+      "ttr": 1.0,
+      "sfs": 3.3,
+      "n_tokens": 33,
+      "diversity_score": 0.6694
+    },
+    {
+      "text": "重庆市: 秀山土家族苗族自治县、酉阳土家族苗族自治县、彭水苗族土家族自治县",
+      "n_words": 7,
+      "n_unique_morphemes": 4,
+      "umr": 0.5714,
+      "ttr": 0.8571,
+      "sfs": 6.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6228
+    },
+    {
+      "text": "朱曼鈴：財經事務及庫務局常任秘書長（庫務）",
+      "n_words": 8,
+      "n_unique_morphemes": 5,
+      "umr": 0.625,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6188
+    },
+    {
+      "text": "伴俊男（漫畫家，代表作《手塚治虫物語》）",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6169
+    },
+    {
+      "text": "潘际銮 - 南昌大学校长（1993）哈工大机械系毕业",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.6167
+    },
+    {
+      "text": "《竹香斋》象戲譜（清乾嘉。篇幅最龐大）",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6161
+    },
+    {
+      "text": "1986年 義大利貝沙洛電影節  《恐怖份子》",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.6667,
+      "n_tokens": 22,
+      "diversity_score": 0.6579
+    },
+    {
+      "text": "1959年：布萊恩·史蒂文森，美國律師、社會公義運動家",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 1.0,
+      "sfs": 4.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6481
+    },
+    {
+      "text": "臧克家作品欣賞 (劉增人、馮光廉) 1988，廣西教育出版社",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 1.0,
+      "sfs": 3.25,
+      "n_tokens": 26,
+      "diversity_score": 0.6142
+    },
+    {
+      "text": "同時遺詔命莊親王允祿、果親王允禮、大學士鄂爾泰、張廷玉為輔政大臣，輔佐新君處理政務。",
+      "n_words": 23,
+      "n_unique_morphemes": 18,
+      "umr": 0.7826,
+      "ttr": 0.913,
+      "sfs": 3.0769,
+      "n_tokens": 40,
+      "diversity_score": 0.6301
+    },
+    {
+      "text": "1991年：格里戈爾·季米特洛夫，保加利亞職業網球運動員",
+      "n_words": 14,
+      "n_unique_morphemes": 10,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 27,
+      "diversity_score": 0.6417
+    },
+    {
+      "text": "9月16日，南太平洋岛国巴布亚新几内亚宣布独立。",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6114
+    },
+    {
+      "text": "《艾森豪威尔将军战争回忆录》，中文版2010 解放军出版社",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6114
+    },
+    {
+      "text": "鴻經館（數學系）－紀念前校長周鴻經",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.6526
+    },
+    {
+      "text": "1917年：段祺瑞辞去中華民國國務總理职。",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.6526
+    },
+    {
+      "text": "王汉斌 - 第十四届中共中央政治局候补委员，第七、八届全国人大常委会副委员长；彭珮云之夫 .",
+      "n_words": 15,
+      "n_unique_morphemes": 10,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.4444,
+      "n_tokens": 31,
+      "diversity_score": 0.6388
+    },
+    {
+      "text": "1943年：米哈伊尔·格罗莫夫，俄羅斯裔法國數學家",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 4.1667,
+      "n_tokens": 25,
+      "diversity_score": 0.651
+    },
+    {
+      "text": "徳川義宣編 『徳川家康真蹟集』 角川書店、1983年",
+      "n_words": 17,
+      "n_unique_morphemes": 13,
+      "umr": 0.7647,
+      "ttr": 0.9412,
+      "sfs": 3.625,
+      "n_tokens": 29,
+      "diversity_score": 0.6537
+    },
+    {
+      "text": "1429年：阿馬尼亞克-勃艮第內戰中，聖女貞德率军解救被围城的圣皮埃尔勒穆捷。",
+      "n_words": 19,
+      "n_unique_morphemes": 14,
+      "umr": 0.7368,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 39,
+      "diversity_score": 0.6498
+    },
+    {
+      "text": "汉譯本：夏格巴·旺秋德丹.《藏區政治史》",
+      "n_words": 12,
+      "n_unique_morphemes": 7,
+      "umr": 0.5833,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6054
+    },
+    {
+      "text": "《简易哲学纲要》(蔡元培编) 商务印书馆 民国13",
+      "n_words": 12,
+      "n_unique_morphemes": 7,
+      "umr": 0.5833,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6039
+    },
+    {
+      "text": "宮田光次、神子田正治、戶田勝隆、尾藤知宣",
+      "n_words": 13,
+      "n_unique_morphemes": 10,
+      "umr": 0.7692,
+      "ttr": 0.8462,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6037
+    },
+    {
+      "text": "1992年越剧电视剧《人比黄花瘦》 傅全香 饰",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6457
+    },
+    {
+      "text": "毛澤東詩詞鑒賞 1990，主編，河北人民出版社",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 0.9,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6028
+    },
+    {
+      "text": "弗雷德里克·奥古斯塔斯·泰思哲，第二代切姆斯福德男爵",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 0.9,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6013
+    },
+    {
+      "text": "旧約 聖書物語（天地創造 十戒 イエスの誕生）",
+      "n_words": 13,
+      "n_unique_morphemes": 7,
+      "umr": 0.5385,
+      "ttr": 1.0,
+      "sfs": 3.6667,
+      "n_tokens": 22,
+      "diversity_score": 0.5999
+    },
+    {
+      "text": "漢毛亨傳、漢鄭玄箋、唐孔穎達等疏：《毛詩正義》",
+      "n_words": 15,
+      "n_unique_morphemes": 10,
+      "umr": 0.6667,
+      "ttr": 0.9333,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.599
+    },
+    {
+      "text": "长津湖（博纳影业与八一电影制片厂2020年摄制）",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6412
+    },
+    {
+      "text": "1970年，乌兰察布盟所属土默特左旗、托克托县划归呼和浩特市。",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.8571,
+      "n_tokens": 27,
+      "diversity_score": 0.6412
+    },
+    {
+      "text": "1975年：马克西姆·姆尔维察，克羅埃西亞鋼琴家",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.8333,
+      "n_tokens": 23,
+      "diversity_score": 0.6404
+    },
+    {
+      "text": "1903年：塞爾維亞國王伉儷遭暗殺引發政變。",
+      "n_words": 12,
+      "n_unique_morphemes": 9,
+      "umr": 0.75,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6637
+    },
+    {
+      "text": "胡厚宣：《五十年甲骨學論著目》（一八九九-一九四九）",
+      "n_words": 14,
+      "n_unique_morphemes": 8,
+      "umr": 0.5714,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.5944
+    },
+    {
+      "text": "1992年台灣版台視電視劇《新白娘子傳奇》：郭麗琴飾瑤池聖母",
+      "n_words": 12,
+      "n_unique_morphemes": 8,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.2222,
+      "n_tokens": 29,
+      "diversity_score": 0.6317
+    },
+    {
+      "text": "法蘭西斯一世和查理五世締結《克雷普和约》。",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6366
+    },
+    {
+      "text": "寂寞深閨，柔腸一寸愁千縷。惜春春去，几點催花雨。",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 0.8667,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.5933
+    },
+    {
+      "text": "呂岱，中國漢末三國時吳國人（256年去世）",
+      "n_words": 14,
+      "n_unique_morphemes": 10,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6524
+    },
+    {
+      "text": "（夜間） 土城 - 行政院(行經板橋車站)",
+      "n_words": 11,
+      "n_unique_morphemes": 6,
+      "umr": 0.5455,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.5918
+    },
+    {
+      "text": "板垣征四郎（二戰時日本陸軍大將，1948年受刑）",
+      "n_words": 14,
+      "n_unique_morphemes": 10,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6509
+    },
+    {
+      "text": "《浙江通史》 金普森、陈剩勇 主编 浙江人民出版社2005年",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.5714,
+      "n_tokens": 25,
+      "diversity_score": 0.632
+    },
+    {
+      "text": "1990年：马库斯·埃里克松，瑞典一級方程式賽車車手",
+      "n_words": 12,
+      "n_unique_morphemes": 8,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6246
+    },
+    {
+      "text": "崇祯十六年（1643年）匈牙利耶稣会教士卫匡国来华。",
+      "n_words": 12,
+      "n_unique_morphemes": 8,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6246
+    },
+    {
+      "text": "1983年：艾達爾別克·霍賈納扎羅夫，哈薩克企業家、政治人物",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 1.0,
+      "sfs": 3.1111,
+      "n_tokens": 28,
+      "diversity_score": 0.6196
+    },
+    {
+      "text": "自然系圖鑑: 鳥類: 鷺科: 夜鷺",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 0.8,
+      "sfs": 4.2,
+      "n_tokens": 21,
+      "diversity_score": 0.5861
+    },
+    {
+      "text": "皇三女，莊敬和硕公主，母和裕皇贵妃刘佳氏；",
+      "n_words": 9,
+      "n_unique_morphemes": 6,
+      "umr": 0.6667,
+      "ttr": 0.8889,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.5859
+    },
+    {
+      "text": "1967年：美国国家航空航天局于卡纳维拉尔角发射阿波罗4号。",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.4286,
+      "n_tokens": 24,
+      "diversity_score": 0.6275
+    },
+    {
+      "text": "1969年：罗伯特·普罗辛内茨基，克羅地亞足球运动員",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.4286,
+      "n_tokens": 24,
+      "diversity_score": 0.6275
+    },
+    {
+      "text": "《摩訶婆羅多》（薄伽梵歌是其中一篇，印度神話）",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6161
+    },
+    {
+      "text": "《渾蓋通憲圖說》：天文學知識，李之藻筆錄。",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6161
+    },
+    {
+      "text": "1996年：伊藤萬理華，日本女子偶像團體乃木坂46成員",
+      "n_words": 14,
+      "n_unique_morphemes": 10,
+      "umr": 0.7143,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.6417
+    },
+    {
+      "text": "血刀老祖（血刀門 第四代掌教）【狄雲誤殺】",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6244
+    },
+    {
+      "text": "1991年：克里斯托夫·克拉默，德國國家足球隊球員",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6244
+    },
+    {
+      "text": "1949年：安德烈·瑞欧，荷蘭小提琴手、作曲家，以華爾茲舞曲創作聞名。",
+      "n_words": 18,
+      "n_unique_morphemes": 11,
+      "umr": 0.6111,
+      "ttr": 0.9444,
+      "sfs": 3.8889,
+      "n_tokens": 35,
+      "diversity_score": 0.6084
+    },
+    {
+      "text": "吴燕生：中国航天科技集团公司总经理、党组副书记（2004- ），国际宇航科学院院士",
+      "n_words": 15,
+      "n_unique_morphemes": 8,
+      "umr": 0.5333,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.5808
+    },
+    {
+      "text": "1987年：泰穆爾·拉迪亞波夫，亞塞拜然西洋棋特級大師。",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 1.0,
+      "sfs": 3.375,
+      "n_tokens": 27,
+      "diversity_score": 0.6182
+    },
+    {
+      "text": "1954年：亞歷山大·克瓦希涅夫斯基，波蘭共和國總統",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6229
+    },
+    {
+      "text": "膩頸凝酥白。輕衫淡粉紅。碧油涼氣透簾櫳。指點庭花低映、雲母屏風。",
+      "n_words": 19,
+      "n_unique_morphemes": 14,
+      "umr": 0.7368,
+      "ttr": 0.8421,
+      "sfs": 3.0,
+      "n_tokens": 36,
+      "diversity_score": 0.5796
+    },
+    {
+      "text": "白榕蔭堂墓園(白崇禧將軍墓)：直轄市定古蹟，1963年建立",
+      "n_words": 17,
+      "n_unique_morphemes": 12,
+      "umr": 0.7059,
+      "ttr": 1.0,
+      "sfs": 3.4444,
+      "n_tokens": 31,
+      "diversity_score": 0.6529
+    },
+    {
+      "text": "1937年：張樹楨，中华民国国民革命军将领（生年不詳）",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 1.0,
+      "sfs": 3.2857,
+      "n_tokens": 23,
+      "diversity_score": 0.6154
+    },
+    {
+      "text": "北條氏康迫使上杉憲政逃離居城平井城，流亡常陸、越後等國。",
+      "n_words": 17,
+      "n_unique_morphemes": 14,
+      "umr": 0.8235,
+      "ttr": 1.0,
+      "sfs": 3.1111,
+      "n_tokens": 28,
+      "diversity_score": 0.6845
+    },
+    {
+      "text": "3月，漢室授金璽、赤紱、遠遊冠給曹操。",
+      "n_words": 15,
+      "n_unique_morphemes": 10,
+      "umr": 0.6667,
+      "ttr": 0.9333,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6057
+    },
+    {
+      "text": "1983年：斯里蘭卡各地爆發，多名坦米爾人傷亡。",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6183
+    },
+    {
+      "text": "1989年：瓦茨拉夫·哈维尔当选为捷克斯洛伐克总统。",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.1429,
+      "n_tokens": 22,
+      "diversity_score": 0.6183
+    },
+    {
+      "text": "《蓋茲堡演說》：紀錄片，由大衛·摩斯配音。",
+      "n_words": 12,
+      "n_unique_morphemes": 6,
+      "umr": 0.5,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.5755
+    },
+    {
+      "text": "罗常培：1920年代国文教员。原名罗莘田，国学大师、学部委员。",
+      "n_words": 15,
+      "n_unique_morphemes": 9,
+      "umr": 0.6,
+      "ttr": 0.9333,
+      "sfs": 3.1111,
+      "n_tokens": 28,
+      "diversity_score": 0.5746
+    },
+    {
+      "text": "晉恭帝司馬德文，晉孝武帝之子，晉安帝之胞弟。",
+      "n_words": 11,
+      "n_unique_morphemes": 8,
+      "umr": 0.7273,
+      "ttr": 0.9091,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.61
+    },
+    {
+      "text": "第12兵團（司令胡璉，副司令柯遠芬，參謀長楊維翰）",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 0.9231,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.572
+    },
+    {
+      "text": "1961年：英格麗德·貝当古，法裔哥倫比亞政治家",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.6667,
+      "n_tokens": 22,
+      "diversity_score": 0.622
+    },
+    {
+      "text": "蓮花池畔，屹立校堂，學海淵遠，書香綿長。",
+      "n_words": 12,
+      "n_unique_morphemes": 8,
+      "umr": 0.6667,
+      "ttr": 0.8333,
+      "sfs": 3.6667,
+      "n_tokens": 22,
+      "diversity_score": 0.5719
+    },
+    {
+      "text": "1944年：若望-伯多祿·里卡爾，法國籍天主教司鐸級樞機、波爾多總教區榮休總主教",
+      "n_words": 24,
+      "n_unique_morphemes": 18,
+      "umr": 0.75,
+      "ttr": 0.9583,
+      "sfs": 3.0714,
+      "n_tokens": 43,
+      "diversity_score": 0.6383
+    },
+    {
+      "text": "順帝被迫下詔罷除左丞相，專命伯顏為中書右丞相，史稱「伯顏專權」。",
+      "n_words": 20,
+      "n_unique_morphemes": 14,
+      "umr": 0.7,
+      "ttr": 0.9,
+      "sfs": 3.0,
+      "n_tokens": 33,
+      "diversity_score": 0.5922
+    },
+    {
+      "text": "阿爾巴尼亞語族：750萬人使用（母語、第二語言）",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6062
+    },
+    {
+      "text": "2009 超級訪問8週年盛典活動 超級氣質藝人獎",
+      "n_words": 11,
+      "n_unique_morphemes": 8,
+      "umr": 0.7273,
+      "ttr": 0.9091,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.606
+    },
+    {
+      "text": "楊貴嬪（？－634），父隋上明郡公杨文纪，高祖退位後隨遷入太安宮，稱太安宫嬪楊氏。",
+      "n_words": 26,
+      "n_unique_morphemes": 17,
+      "umr": 0.6538,
+      "ttr": 0.9231,
+      "sfs": 3.0,
+      "n_tokens": 42,
+      "diversity_score": 0.5858
+    },
+    {
+      "text": "1942年：因德麗亞蒂·伊斯卡克，印尼女演員、心理學家、營銷家",
+      "n_words": 17,
+      "n_unique_morphemes": 11,
+      "umr": 0.6471,
+      "ttr": 0.9412,
+      "sfs": 3.1111,
+      "n_tokens": 28,
+      "diversity_score": 0.595
+    },
+    {
+      "text": "蔣經國對禁賭、禁煙、禁娼，言出必行。",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 0.9,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.5669
+    },
+    {
+      "text": "和平：阿里斯蒂德·白里安、古斯塔夫·施特雷澤曼",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 0.9,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.5669
+    },
+    {
+      "text": "非洲：鲁文佐里山、乞力马扎罗山、巴蒂安山。",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 0.9,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.5669
+    },
+    {
+      "text": "1984年：汶萊加入東南亞國協，成為第六個會員國。",
+      "n_words": 15,
+      "n_unique_morphemes": 11,
+      "umr": 0.7333,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 21,
+      "diversity_score": 0.6486
+    },
+    {
+      "text": "吉尔吉斯语（柯尔克孜语，吉尔吉斯斯坦、中国新疆）",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.6167
+    },
+    {
+      "text": "渥雷·索因卡：尼日利亞詩人，諾貝爾獎得主。",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 21,
+      "diversity_score": 0.6167
+    },
+    {
+      "text": "陈学勇  2004《林徽因寻真 - 林徽因生平创作丛考》北京：中华书局。",
+      "n_words": 15,
+      "n_unique_morphemes": 8,
+      "umr": 0.5333,
+      "ttr": 0.9333,
+      "sfs": 3.5556,
+      "n_tokens": 32,
+      "diversity_score": 0.5649
+    },
+    {
+      "text": "1974年：香港銅鑼灣豪華戲院炸彈爆炸。",
+      "n_words": 10,
+      "n_unique_morphemes": 7,
+      "umr": 0.7,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6473
+    },
+    {
+      "text": "长篇小说《钟鼓楼》1985年获第二届茅盾文学奖。",
+      "n_words": 10,
+      "n_unique_morphemes": 6,
+      "umr": 0.6,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 20,
+      "diversity_score": 0.6114
+    },
+    {
+      "text": "《小鬥士大冒險》（腳本：朱仲豪 漫畫：馬遜 短篇）",
+      "n_words": 13,
+      "n_unique_morphemes": 7,
+      "umr": 0.5385,
+      "ttr": 0.9231,
+      "sfs": 3.5,
+      "n_tokens": 28,
+      "diversity_score": 0.5604
+    },
+    {
+      "text": "大菩薩藏經（是大寶積經菩薩藏會，菩薩藏正法經是同本異譯 ）",
+      "n_words": 17,
+      "n_unique_morphemes": 13,
+      "umr": 0.7647,
+      "ttr": 0.8235,
+      "sfs": 3.0,
+      "n_tokens": 30,
+      "diversity_score": 0.5814
+    },
+    {
+      "text": "大多數（90％）烏茲別克斯坦穆斯林屬於遜尼派；什葉派穆斯林則佔1％。",
+      "n_words": 21,
+      "n_unique_morphemes": 12,
+      "umr": 0.5714,
+      "ttr": 0.9048,
+      "sfs": 3.3,
+      "n_tokens": 33,
+      "diversity_score": 0.5577
+    },
+    {
+      "text": "1998年：米爾蒂亞季斯·滕托格盧，希臘男子田徑運動員",
+      "n_words": 12,
+      "n_unique_morphemes": 8,
+      "umr": 0.6667,
+      "ttr": 1.0,
+      "sfs": 3.25,
+      "n_tokens": 26,
+      "diversity_score": 0.6326
+    },
+    {
+      "text": "1895年：薩爾瓦多、宏都拉斯、尼加拉瓜共組中美洲聯盟。",
+      "n_words": 13,
+      "n_unique_morphemes": 8,
+      "umr": 0.6154,
+      "ttr": 0.9231,
+      "sfs": 3.7143,
+      "n_tokens": 26,
+      "diversity_score": 0.5949
+    },
+    {
+      "text": "塞西爾·鮑威爾，1950年诺贝尔物理学奖获得者。",
+      "n_words": 9,
+      "n_unique_morphemes": 5,
+      "umr": 0.5556,
+      "ttr": 1.0,
+      "sfs": 4.0,
+      "n_tokens": 20,
+      "diversity_score": 0.6167
+    },
+    {
+      "text": "《颂歌献给毛主席》女声独唱：刘旭峰 作词：瞿琮 作曲：郑秋枫",
+      "n_words": 14,
+      "n_unique_morphemes": 9,
+      "umr": 0.6429,
+      "ttr": 0.8571,
+      "sfs": 3.1111,
+      "n_tokens": 28,
+      "diversity_score": 0.5561
+    },
+    {
+      "text": "1937年：昆杜拉·雅諾維茨，奧地利女高音歌劇演唱家",
+      "n_words": 12,
+      "n_unique_morphemes": 7,
+      "umr": 0.5833,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.5987
+    },
+    {
+      "text": "1981年：弗朗西斯科·加西亞，多米尼加职業籃球運動員",
+      "n_words": 11,
+      "n_unique_morphemes": 7,
+      "umr": 0.6364,
+      "ttr": 1.0,
+      "sfs": 3.8571,
+      "n_tokens": 27,
+      "diversity_score": 0.6412
+    }
+  ]
+}

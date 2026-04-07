@@ -142,7 +142,7 @@ fi
 # 목적: "언어 불일치 vs 다양성 부족" 혼재 해소
 # ─────────────────────────────────────────────────────────
 log "=== [S4-2] C_zh_v3 calibration 생성 (min_sfs=3.0) ==="
-CALIB_C_ZH_V3="${RESULTS}/calibration_set_C_zh_v3_Qwen_Qwen2-7B-Instruct.json"
+CALIB_C_ZH_V3=$(ls "${RESULTS}"/calibration_set_C_zh_v3_Qwen_Qwen2*.json 2>/dev/null | head -1)
 
 if [ ! -f "${CALIB_C_ZH_V3}" ]; then
     log "C_zh_v3 calibration 생성 중 (min_sfs=3.0, ~15분)..."
