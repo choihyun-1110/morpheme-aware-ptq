@@ -16,11 +16,15 @@ Sprint 3까지의 실험 갭을 보완하고, 논문으로 완성한다.
 
 | ID | 항목 | 우선순위 | 상태 |
 |----|------|---------|------|
-| S4-1 | C_v3 vs B 통계 검정 (5회 런 → 95% CI) | 🔴 최고 | ⬜ 대기 |
-| S4-2 | C_zh_v3 생성 + Qwen2 재실험 (다양성 vs 언어 정렬 혼재 해소) | 🔴 최고 | ⬜ 대기 |
-| S4-3 | 누락 조건 보완 실험 (B g64 / desc_act=False A / EEVE FP16+A) | 🟡 중간 | ⬜ 대기 |
-| S4-4 | C_v3_exaone 생성 + EXAONE35 재실험 (tokenizer 의존성 일반화) | 🟡 중간 | ⬜ 대기 |
-| S4-5 | Activation 시각화 개선 (Sprint3 모델 추가 + 논문용 figure) | 🟡 중간 | ✅ 완료 |
+| S4-1 | C_v3 vs B 통계 검정 (5회 런 → 95% CI) | 🔴 최고 | ✅ 완료 |
+| S4-2 | C_zh_v3 생성 + Qwen2 재실험 | 🔴 최고 | ✅ 완료 |
+| S4-3 | 누락 조건 보완 실험 (B g64 / desc_act=False A / EEVE FP16+A) | 🟡 중간 | ✅ 완료 |
+| S4-4 | C_v3_exaone 생성 + EXAONE35 재실험 | 🟡 중간 | ✅ 완료 |
+| S4-5 | Activation 시각화 개선 | 🟡 중간 | ✅ 완료 |
+| C_v5 | token richness δ 효과 검증 (C_v5 / C_v5_delta ablation) | 🟡 중간 | ✅ 완료 |
+| S4-9 | C_en_v3 생성 + Llama3-Ko 재실험 (영어 다양성 검증) | 🔴 최고 | ✅ 완료 |
+| S4-10 | EEVE kmmlu (A/B/C_v3/C_v3_eeve) | 🟡 중간 | 🔄 진행 중 |
+| S4-11 | EXAONE35 kmmlu (A/B/C_v3/C_v3_exaone) | 🟡 중간 | 🔄 진행 중 |
 | S4-6 | SmoothScale alpha 탐색 (0.1~0.3, layer-wise) | 🟢 낮음 | ⬜ 대기 |
 | S4-7 | AWQ A vs C_v3 (방법론 독립성 확인) | 🟢 낮음 | ⬜ 대기 |
 | S4-8 | 논문 작성 | 🔴 최고 (6/12) | ⬜ 대기 |
@@ -94,6 +98,39 @@ Sprint 3까지의 실험 갭을 보완하고, 논문으로 완성한다.
 
 ---
 
+## S4-9: C_en_v3 + Llama3-Ko 재실험 ← 논문 완결을 위해 필수
+
+**목적:** "다양성 원칙이 언어에 독립적인가" 최종 검증
+
+**배경:**
+- 한국어 모델: 랜덤 한국어(B) < 다양성 한국어(C_v3) 확인 ✅
+- 중국어 모델: C_zh_v3 실험 중 (2026-04-07)
+- Llama3-Ko (영어 사전학습): A(랜덤 영어) > C_v3(한국어 다양성) — 사전학습 언어 가설 역방향 지지
+  - 하지만 A = 랜덤 선택. **C_en_v3 = 다양성 선택(영어)** 는 아직 미실험
+
+**C_en_v3 알고리즘:**
+- 데이터 소스: Wikitext-2 (A와 동일 풀, 선별만 다름)
+- 형태소 분석: NLTK POS 태깅 + WordNet 표제어 → `(lemma, coarse_POS)` 쌍
+- 선별: 동일 greedy 알고리즘으로 `(lemma, POS)` 커버리지 최대화
+
+**결과 해석:**
+| 결과 | 의미 |
+|------|------|
+| C_en_v3 > A | 다양성 원칙이 영어에도 유효 → **언어 독립적 일반 원리** 확립 |
+| C_en_v3 ≈ A | Wikitext-2가 이미 충분히 다양 (다양성 원칙의 한계 or 천장 효과) |
+
+**구현 완료 (2026-04-07):**
+- `src/build_calibration_en.py` — NLTK 기반 영어 calibration 생성
+- `src/run_exp_llama3ko_cen.sh` — 실험 자동화 스크립트
+
+**실행 방법:**
+```bash
+docker exec llm-dev bash /home/choihyun/workspace/src/run_exp_llama3ko_cen.sh
+```
+(GPU0에서 C_v5 실험 완료 후 이어서 실행)
+
+---
+
 ## S4-6: SmoothScale alpha 탐색
 
 **배경:** alpha=0.5 → Hessian 붕괴 (0.4795). alpha=0.1~0.3 탐색 필요.
@@ -140,3 +177,20 @@ Sprint 4 backlog 생성. Sprint 3 갭 분석 완료:
 - `thoughts/11_Sprint4_방향성_및_갭분析.md` 참고
 - 최우선: S4-1(통계), S4-2(C_zh_v3), S4-5(activation 시각화)
 - 경쟁 논문 Chimoto et al. (EACL 2026) 발견 — 차별화 전략 재정립 필요
+
+### 2026-04-10
+
+주요 실험 완료:
+- S4-1~S4-4 모두 완료
+- C_v5 / C_v5_delta ablation 완료 → cross-sentence coverage가 within-sentence richness보다 중요
+- S4-9 (C_en_v3 + Llama3-Ko) 완료 → C_en_v3(0.5916) ≈ A(0.5964), 다양성 효과 미미
+  - 이유: Wikitext-2 자체가 이미 균질한 고품질 텍스트
+- Qwen2 C_zh_v3 완료 → C-Eval 0.787 (모든 조건 중 최고)
+- Llama3-Ko FP16 기준값: 0.5932
+- EEVE / EXAONE35 kmmlu: 진행 중 (GPU0/1)
+
+에러 이슈:
+- huggingface_hub 신버전에서 로컬 경로 → HF repo ID 검증 실패 → 모든 스크립트 HF model ID 사용으로 수정
+- EEVE tokenizer cache 미완 → snapshot_download로 tokenizer만 추가 다운로드
+
+상세 결과: `thoughts/03_Sprint4_실험결과_종합.md`

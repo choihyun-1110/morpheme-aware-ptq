@@ -1,0 +1,1303 @@
+{
+  "condition": "C_en_morphology_diverse",
+  "model": "/home/choihyun/workspace/.cache/huggingface/hub/models--beomi--Llama-3-Open-Ko-8B/snapshots/a8e8214f79f0d2cea817020a93dca48e8a6be18b",
+  "n_sentences": 128,
+  "n_unique_morphemes": 1127,
+  "avg_diversity_score": 0.7547,
+  "avg_sfs": 2.6306,
+  "avg_n_tokens": 29.65,
+  "params": {
+    "model": "/home/choihyun/workspace/.cache/huggingface/hub/models--beomi--Llama-3-Open-Ko-8B/snapshots/a8e8214f79f0d2cea817020a93dca48e8a6be18b",
+    "n_sentences": 128,
+    "n_candidates": 50000,
+    "alpha": 0.3,
+    "min_words": 8,
+    "min_tokens": 20,
+    "min_en_ratio": 0.7,
+    "min_sfs": 0.0,
+    "seed": 42,
+    "suffix": "en_v3"
+  },
+  "sentences": [
+    {
+      "text": "Punjabi ( Gurmukhi ) : ਅੱਲਾਹ Allāh , archaic ਅਲਹੁ Alahu ( in Sikh scriptures )",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 5.125,
+      "n_tokens": 41,
+      "diversity_score": 0.8958
+    },
+    {
+      "text": "A Nuskhuri abbreviation of იესუ ქრისტე ( iesu kriste ) \" Jesus Christ \"",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 4.4444,
+      "n_tokens": 40,
+      "diversity_score": 0.858
+    },
+    {
+      "text": "341st , 342nd , & 462nd Batteries , 86th ( East Anglian ) ( Hertfordshire Yeomanry ) Field Regiment , RA ( Self @-@ propelled )",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 4.2,
+      "n_tokens": 42,
+      "diversity_score": 0.8444
+    },
+    {
+      "text": "Arora D. ( 1986 ) . Mushrooms Demystified : A Comprehensive Guide to the Fleshy Fungi . Berkeley , California : Ten Speed Press . ISBN 0 @-@ 89815 @-@ 169 @-@ 4 .",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.6667,
+      "n_tokens": 55,
+      "diversity_score": 0.8148
+    },
+    {
+      "text": "\" Cambodia : A Cocky New ARVN \" . Time . 8 June 1970 . Retrieved 10 April 2007 .",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 28,
+      "diversity_score": 0.8056
+    },
+    {
+      "text": "\" Zionist orientations \" , Scandinavian Journal of Development Alternatives 9 ( March 1990 ) 1 @.@  p . 41 @-@ 69",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 4.125,
+      "n_tokens": 33,
+      "diversity_score": 0.8403
+    },
+    {
+      "text": "Only four letters are x @-@ height , with neither ascenders nor descenders : ა , თ , ი , ო .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.3,
+      "n_tokens": 33,
+      "diversity_score": 0.7944
+    },
+    {
+      "text": "Cinta Pertama ( First Love ; 1973 ) ( awarded Citra FFI 1974 , Surabaya )",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.25,
+      "n_tokens": 26,
+      "diversity_score": 0.7917
+    },
+    {
+      "text": "F @-@ 1 Dream ( PC Engine ) ( 1989 ) – original music by Manami Matsumae",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.7847
+    },
+    {
+      "text": "Super Smash Bros. Brawl ( 2008 ) – arranged \" Tetris : Type A \" , \" Gritzy Desert \" , and \" King Dedede 's Theme \"",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0833,
+      "n_tokens": 37,
+      "diversity_score": 0.7824
+    },
+    {
+      "text": "Lorenzo Ganganelli , O.F.M.Conv. ( September 24 , 1759 ) – Cardinal @-@ Priest of SS . XII Apostoli",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.6667,
+      "n_tokens": 33,
+      "diversity_score": 0.8148
+    },
+    {
+      "text": "Wimbledon 2007 Final : Federer vs. Nadal ( 2007 ) . Kultur White Star , DVD release date : 30 October 2007 , run time : 180 minutes , ASIN B000V02CU0 .",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.4,
+      "n_tokens": 51,
+      "diversity_score": 0.8
+    },
+    {
+      "text": "Quattroruote Premio Speciale per la Sicurezza Stradale ( Italy ) , 2001",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.875,
+      "n_tokens": 23,
+      "diversity_score": 0.7708
+    },
+    {
+      "text": "305th , 536th & 705th General Transport Companies , Royal Army Service Corps ( RASC )",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.75,
+      "n_tokens": 22,
+      "diversity_score": 0.7639
+    },
+    {
+      "text": "HMS Swift , Faulknor ( destroyer leader ) , Matchless , Mastiff , Afridi , Tempest , Tetrarch",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.7,
+      "n_tokens": 27,
+      "diversity_score": 0.7611
+    },
+    {
+      "text": "On July 19 , a tropical cyclone was detected . A ship reported a pressure of 1 @,@ 000 @.@ 7 millibars ( 29 @.@ 55 inHg ) .",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.5833,
+      "n_tokens": 43,
+      "diversity_score": 0.8102
+    },
+    {
+      "text": "Seabrook , Andrea ( January 27 , 2008 ) . \" Hackers Target Scientology Web Sites \" . All Things Considered ( NPR ) . ( Radio broadcast )",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.6429,
+      "n_tokens": 37,
+      "diversity_score": 0.7579
+    },
+    {
+      "text": "Blokker , Bas ( review of Beyond Chutzpah ) , NRC Handelsblad , February 24 , 2006 .",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.2222,
+      "n_tokens": 29,
+      "diversity_score": 0.7901
+    },
+    {
+      "text": "Death Blossoms : Reflections From A Prisoner Of Conscience Plough Publishing House ( 1997 ) ISBN 978 @-@ 0874860863",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 33,
+      "diversity_score": 0.7778
+    },
+    {
+      "text": "\" Unseen @-@ Unfeared \" ( People 's Favorite Magazine Feb. 10 , 1919 ; reprinted in Horrors Unknown , edited by Sam Moskowitz , 1971 )",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.3077,
+      "n_tokens": 43,
+      "diversity_score": 0.7949
+    },
+    {
+      "text": "\" But ' glory ' doesn 't mean ' a nice knock @-@ down argument ' , \" Alice objected .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.4,
+      "n_tokens": 24,
+      "diversity_score": 0.7444
+    },
+    {
+      "text": "yon koze ak moun tranblemandetè ann Ayiti a afekte . United States : Xlibris . ISBN 9781479709472 .",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.75,
+      "n_tokens": 33,
+      "diversity_score": 0.7639
+    },
+    {
+      "text": "11 Pièces dans le style religieux , et une transcription du Messie de Hændel , Op. 72 – played by Kevin Bowyer ( organ ) . Recorded 2005 . Toccata TOCC 0031 ( 2007 )",
+      "n_words": 21,
+      "n_unique_morphemes": 21,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5238,
+      "n_tokens": 53,
+      "diversity_score": 0.7513
+    },
+    {
+      "text": "\" Confessions Part II \" ( Remix ) ( featuring Shyne , Kanye West & Twista )",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.7346
+    },
+    {
+      "text": "Jaya Bhaduri as Radha , Thakur 's daughter @-@ in @-@ law",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.875,
+      "n_tokens": 23,
+      "diversity_score": 0.7708
+    },
+    {
+      "text": "Massad , Joseph . \" Deconstructing Holocaust Consciousness \" , Review Essay , Journal of Palestine Studies , Vol . 32 , No. 1 . ( Autumn , 2002 ) , pp. 78 – 89 .",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.2,
+      "n_tokens": 48,
+      "diversity_score": 0.7889
+    },
+    {
+      "text": "Louis @-@ César @-@ Constantine de Rohan @-@ Guéménée ( November 23 , 1761 ) – Cardinal @-@ Priest [ no title assigned ] ; bishop of Strasbourg",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.1333,
+      "n_tokens": 47,
+      "diversity_score": 0.7852
+    },
+    {
+      "text": "Naparstek , Ben . \" His Own Worst Enemy . \" The Jerusalem Post 12 December 2005 .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 25,
+      "diversity_score": 0.75
+    },
+    {
+      "text": "The nomen nudum \" Proiguanodon \" ( van den Broeck , 1900 ) also belongs here .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 25,
+      "diversity_score": 0.75
+    },
+    {
+      "text": "Eastern South American cougar ( P. c. anthonyi ) Nelson and Goldman , 1931 :",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.625,
+      "n_tokens": 21,
+      "diversity_score": 0.7569
+    },
+    {
+      "text": "Karnow , Stanley , Vietnam : A History . New York : Viking Books , 1983 .",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.625,
+      "n_tokens": 21,
+      "diversity_score": 0.7569
+    },
+    {
+      "text": "L. c. merriamai ( Mearns ) – south @-@ central and southeastern Texas to Tamaulipas",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.1111,
+      "n_tokens": 28,
+      "diversity_score": 0.784
+    },
+    {
+      "text": "1969 : Strategic Interaction . Philadelphia : University of Pennsylvania Press . ISBN 0 @-@ 345 @-@ 02804 @-@ X",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.875,
+      "n_tokens": 31,
+      "diversity_score": 0.8264
+    },
+    {
+      "text": "Applying Sun Tzu 's Art of War ( 2002 ) – A six handguides collection",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.4444,
+      "n_tokens": 22,
+      "diversity_score": 0.7469
+    },
+    {
+      "text": "The Seven Sacraments ; baptismal font panels , St. Andrew 's , Croydon",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 20,
+      "diversity_score": 0.75
+    },
+    {
+      "text": "syād @-@ avaktavyaḥ — in some ways , it is indescribable .",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.125,
+      "n_tokens": 25,
+      "diversity_score": 0.7847
+    },
+    {
+      "text": "Nolan , Keith W. Into Cambodia : Spring Campaign , Summer Offensive , 1970 . Novato CA : Presidio Press , 1990 .",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.6667,
+      "n_tokens": 32,
+      "diversity_score": 0.7593
+    },
+    {
+      "text": "Chinese ( Mandarin ) : 阿拉 Ālā , 安拉 Ānlā ; 真主 Zhēnzhǔ ( semantic translation as \" the true master \" ) , 胡大 Huda ( Khoda , from Persian language )",
+      "n_words": 20,
+      "n_unique_morphemes": 20,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.55,
+      "n_tokens": 51,
+      "diversity_score": 0.7528
+    },
+    {
+      "text": "Sussex deducted 1 point for a slow over @-@ rate in their match against Worcestershire.Notes :",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.7323
+    },
+    {
+      "text": "Wild Cherry Makes A Wish ; ( collaboration with Pippa Le Quesne ) Frederick Warne , 2006",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.7323
+    },
+    {
+      "text": "De Gordel van Smaragd - Netherlands ( 1997 ) ( The Tropic of Emerald ; 1997 )",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.8889,
+      "n_tokens": 26,
+      "diversity_score": 0.7716
+    },
+    {
+      "text": "Barium perxenate , when treated with concentrated sulfuric acid , yields gaseous xenon tetroxide :",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0833,
+      "n_tokens": 25,
+      "diversity_score": 0.7269
+    },
+    {
+      "text": "Out of Great Tribulation ; memorial chapel , Norbury Medthodist church , 1948",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.7346
+    },
+    {
+      "text": "National Institute of Mental Health , Bethesda , Maryland : visiting scientist , 1954 – 57 ;",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.7346
+    },
+    {
+      "text": "includes the previous subspecies and synonyms arundivaga , aztecus , browni , californica , floridana , hippolestes , improcera , kaibabensis , mayensis , missoulensis , olympus , oregonensis , schorgeri , stanleyana , vancouverensis , and youngi",
+      "n_words": 23,
+      "n_unique_morphemes": 22,
+      "umr": 0.9565,
+      "ttr": 0.9565,
+      "sfs": 3.087,
+      "n_tokens": 71,
+      "diversity_score": 0.7246
+    },
+    {
+      "text": "Aged 17 years 11 mos . 9 daysA member of Co . H , 22nd Regiment",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.875,
+      "n_tokens": 23,
+      "diversity_score": 0.7708
+    },
+    {
+      "text": "\" Courage \" ( ゆうき , Yûki ) : A girl confesses her love on Valentine 's Day .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.6,
+      "n_tokens": 26,
+      "diversity_score": 0.7556
+    },
+    {
+      "text": "Key to positions : GK – Goalkeeper ; DF – Defender ; MF – Midfielder ; FW – Forward",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 22,
+      "diversity_score": 0.7222
+    },
+    {
+      "text": "Jerry Alisandros , mass tort operator who brings F & F into his firm 's fold .",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.9091,
+      "n_tokens": 21,
+      "diversity_score": 0.7172
+    },
+    {
+      "text": "50th ( Northumbrian ) Infantry Division , commanded by Major @-@ General D.A.H. Graham",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.75,
+      "n_tokens": 22,
+      "diversity_score": 0.7639
+    },
+    {
+      "text": "1995 June 25 : Ultraviolet Hubble Space Telescope images with 50 @-@ kilometer resolution .",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5556,
+      "n_tokens": 23,
+      "diversity_score": 0.7531
+    },
+    {
+      "text": "Burt Kwouk as Spectre 3 : one of Blofeld 's henchmen .",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.625,
+      "n_tokens": 21,
+      "diversity_score": 0.7569
+    },
+    {
+      "text": "A 1964 commercial television adaptation starred Ian Carmichael , Patrick Macnee , Susannah York , Fenella Fielding , Pamela Brown and Irene Handl .",
+      "n_words": 17,
+      "n_unique_morphemes": 17,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.8824,
+      "n_tokens": 32,
+      "diversity_score": 0.7157
+    },
+    {
+      "text": "I Am Among You As He That Serveth ; stained glass window design , St. Edmund 's , Pitlake , 1962",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0769,
+      "n_tokens": 27,
+      "diversity_score": 0.7265
+    },
+    {
+      "text": "Contributor to The Politics of Anti @-@ Semitism . Ed . Alexander Cockburn and Jeffrey St. Clair . AK Press , 2001 ; ISBN 1 @-@ 902593 @-@ 77 @-@ 4 .",
+      "n_words": 16,
+      "n_unique_morphemes": 16,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.25,
+      "n_tokens": 52,
+      "diversity_score": 0.7917
+    },
+    {
+      "text": "Keshto Mukherjee as Hariram , prison barber and Jailor 's side @-@ kick",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3,
+      "n_tokens": 23,
+      "diversity_score": 0.7389
+    },
+    {
+      "text": "Sesuatu yang Indah ( Something Beautiful ; 1977 ) ( awarded Citra FFI 1977 , Jakarta )",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 27,
+      "diversity_score": 0.7778
+    },
+    {
+      "text": "Jay @-@ Z appears courtesy of Roc @-@ A @-@ Fella Records and Def Jam Recordings",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.7323
+    },
+    {
+      "text": "\" Fire Storm A \" by Wolfgang Killian & Hermann Langschwert ( WWE ; November 2005 – February 2007 )",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.8,
+      "n_tokens": 28,
+      "diversity_score": 0.7667
+    },
+    {
+      "text": "A Child ’ s Garden of Verses ( Robert Louis Stevenson ) ; Blackie , 1944",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 20,
+      "diversity_score": 0.75
+    },
+    {
+      "text": "Finkelstein Responds to Clinton , Netanyahu AIPAC Comments March 23 , 2010",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 20,
+      "diversity_score": 0.75
+    },
+    {
+      "text": "= = = 2008 : Illness , fifth US Open title and Olympic Gold = = =",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5,
+      "n_tokens": 20,
+      "diversity_score": 0.75
+    },
+    {
+      "text": "Nalty , Bernard C. War Against Trucks : Aerial Interdiction in Southern Laos , 1968 – 1972 . Washington DC : Air Force History and Museums Program , 2005 .",
+      "n_words": 18,
+      "n_unique_morphemes": 18,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3333,
+      "n_tokens": 42,
+      "diversity_score": 0.7407
+    },
+    {
+      "text": "Powerplant : 2 × Rolls @-@ Royce Nene I turbojet , 22 kN ( 5 @,@ 000 lbf ) thrust each each",
+      "n_words": 10,
+      "n_unique_morphemes": 9,
+      "umr": 0.9,
+      "ttr": 0.9,
+      "sfs": 3.5,
+      "n_tokens": 35,
+      "diversity_score": 0.6722
+    },
+    {
+      "text": "Or hear the voice of busy common @-@ sense ! ( lines 41 – 50 )",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.7346
+    },
+    {
+      "text": "Other compounds containing xenon bonded to a less electronegative element include F – Xe – N ( SO",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.9167,
+      "n_tokens": 23,
+      "diversity_score": 0.7176
+    },
+    {
+      "text": "Paratrooper Special Groups ( Grupos Especiais Pára @-@ Quedistas ) : units of volunteer black soldiers that had paratrooper training",
+      "n_words": 16,
+      "n_unique_morphemes": 16,
+      "umr": 1.0,
+      "ttr": 0.9375,
+      "sfs": 2.0625,
+      "n_tokens": 33,
+      "diversity_score": 0.6849
+    },
+    {
+      "text": "2014 : Old Wine , Broken Bottle : Ari Shavit 's Promised Land , OR Books , New York ( 2014 )",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3333,
+      "n_tokens": 28,
+      "diversity_score": 0.7407
+    },
+    {
+      "text": "= = = Mrs Beeton 's Book of Household Management and later , 1861 – 65 = = =",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.0,
+      "n_tokens": 24,
+      "diversity_score": 0.7778
+    },
+    {
+      "text": "Nicola Perelli ( September 24 , 1759 ) – Cardinal @-@ Deacon of S. Giorgio in Velabro",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.3333,
+      "n_tokens": 30,
+      "diversity_score": 0.7963
+    },
+    {
+      "text": "A ligature of the Asomtavruli letters Ⴃ Ⴀ ( და , da ) \" and \"",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.625,
+      "n_tokens": 29,
+      "diversity_score": 0.8125
+    },
+    {
+      "text": "Proteopedia – Life in 3D : rotatable , zoomable 3D model with wiki annotations for every known protein molecular structure .",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 30,
+      "diversity_score": 0.7222
+    },
+    {
+      "text": "ჴ ( qari , hari ) came to be pronounced the same as ხ ( khani ) , and was replaced by it. e.g. ჴლმწიფე became ხელმწიფე \" sovereign \" .",
+      "n_words": 19,
+      "n_unique_morphemes": 18,
+      "umr": 0.9474,
+      "ttr": 1.0,
+      "sfs": 3.6316,
+      "n_tokens": 69,
+      "diversity_score": 0.777
+    },
+    {
+      "text": "Simone Buonaccorsi ( July 18 , 1763 ) – Cardinal @-@ Priest of S. Giovanni a Porta Latina",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.2222,
+      "n_tokens": 29,
+      "diversity_score": 0.7901
+    },
+    {
+      "text": "Member of High Level Gp , CARS ( Competitive Automotive Regulatory System for the 21st century ) 21 , 2005 @-@ 09",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.4615,
+      "n_tokens": 32,
+      "diversity_score": 0.7479
+    },
+    {
+      "text": "Filippo Maria Pirelli ( September 26 , 1766 ) – Cardinal @-@ Priest of S. Crisogono",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.5,
+      "n_tokens": 28,
+      "diversity_score": 0.8056
+    },
+    {
+      "text": "= 7 / 2 ) suppresses the superconductivity , which is induced by eliminating this local moment ( J =",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2727,
+      "n_tokens": 25,
+      "diversity_score": 0.7374
+    },
+    {
+      "text": "Box score for Monday September 28 , 1998 — 7 : 10 p.m. ( CT ) at Wrigley Field in Chicago",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.7273,
+      "n_tokens": 30,
+      "diversity_score": 0.7626
+    },
+    {
+      "text": "World Tag Team Championship ( 2 times ) – with Kane ( 1 ) and Rosey ( 1 )",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5556,
+      "n_tokens": 23,
+      "diversity_score": 0.7531
+    },
+    {
+      "text": "141st Royal Tank Regiment ( The Buffs ) ( Churchill Crocodiles ) ( 2 Troops )",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.75,
+      "n_tokens": 22,
+      "diversity_score": 0.7639
+    },
+    {
+      "text": "Total damages to Louisiana , Florida , Alabama , the Carolinas , and Virginia was $ 24 @.@ 8 million ( 1956 USD ) .",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3846,
+      "n_tokens": 31,
+      "diversity_score": 0.7436
+    },
+    {
+      "text": "TopSpin Facebuster ( Fireman 's carry spun out into a facebreaker knee smash ) ( often followed by a shining wizard )",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.8,
+      "n_tokens": 27,
+      "diversity_score": 0.7111
+    },
+    {
+      "text": "Chandradeva , founder of the Gahadvala dynasty made Banaras a second capital in 1090 .",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.1818,
+      "n_tokens": 24,
+      "diversity_score": 0.7323
+    },
+    {
+      "text": "1967 , Marvin Minsky : \" Within a generation ... the problem of creating ' artificial intelligence ' will substantially be solved . \"",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.8571,
+      "n_tokens": 26,
+      "diversity_score": 0.7143
+    },
+    {
+      "text": "In 2011 , England reached the quarter final stage , losing 19 @-@ 12 to France .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3,
+      "n_tokens": 23,
+      "diversity_score": 0.7389
+    },
+    {
+      "text": "Contributor to Radicals , Rabbis and Peacemakers : Conversations with Jewish Critics of Israel , by Seth Farber . Common Courage Press , 2005 . ISBN 1 @-@ 56751 @-@ 326 @-@ 3 .",
+      "n_words": 19,
+      "n_unique_morphemes": 19,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.9474,
+      "n_tokens": 56,
+      "diversity_score": 0.7749
+    },
+    {
+      "text": "In 2009 , Radio host Rush Limbaugh professed no doubt about Abu @-@ Jamal 's guilt , calling him a \" notorious Philadelphia murderer \" .",
+      "n_words": 17,
+      "n_unique_morphemes": 17,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.9412,
+      "n_tokens": 33,
+      "diversity_score": 0.719
+    },
+    {
+      "text": "= = = The Devil Put Dinosaurs Here and next album ( 2011 – present ) = = =",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.4444,
+      "n_tokens": 22,
+      "diversity_score": 0.7469
+    },
+    {
+      "text": "David Zinc , Finley & Figg Associate attorney - Prototypical Grisham young hot shot Harvard graduate lawyer whose life is turned upside down .",
+      "n_words": 20,
+      "n_unique_morphemes": 20,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.45,
+      "n_tokens": 29,
+      "diversity_score": 0.6917
+    },
+    {
+      "text": "Di Balik Kelambu ( Behind the Screen ; 1982 ) ( awarded Citra FFI 1983 , Medan )",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.8,
+      "n_tokens": 28,
+      "diversity_score": 0.7667
+    },
+    {
+      "text": "Bennett also wrote an early dystopian novel , The Heads of Cerberus ( 1919 ) .",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0909,
+      "n_tokens": 23,
+      "diversity_score": 0.7273
+    },
+    {
+      "text": "Game Music Festival ~ Super Live ' 92 ~ ( 1992 ) – with Alph Lyla",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.625,
+      "n_tokens": 21,
+      "diversity_score": 0.7569
+    },
+    {
+      "text": "A War Too Long : The USAF in Southeast Asia , 1961 @-@ 1975",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.625,
+      "n_tokens": 21,
+      "diversity_score": 0.7569
+    },
+    {
+      "text": "Thunderbird 1 : a hypersonic rocket plane used for fast response and accident zone reconnaissance . Piloted by primary rescue co @-@ ordinator Scott Tracy .",
+      "n_words": 20,
+      "n_unique_morphemes": 20,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.65,
+      "n_tokens": 33,
+      "diversity_score": 0.7028
+    },
+    {
+      "text": "Silver Bullet 's layout passes through three of the park 's themed areas : Ghost Town , Fiesta Village , and Indian Trails .",
+      "n_words": 18,
+      "n_unique_morphemes": 18,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.4444,
+      "n_tokens": 26,
+      "diversity_score": 0.6914
+    },
+    {
+      "text": "L. c. texianus ( Waterhouse ) – southeastern Utah and southwestern Colorado to Zacatecas",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3333,
+      "n_tokens": 21,
+      "diversity_score": 0.7407
+    },
+    {
+      "text": "Girolamo Spinola ( September 24 , 1759 ) – Cardinal @-@ Priest of S. Balbina ; legate in Ferrara",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.2,
+      "n_tokens": 32,
+      "diversity_score": 0.7889
+    },
+    {
+      "text": "Teru Shimada as Mr. Osato : A Japanese industrialist secretly affiliated to SPECTRE .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.1,
+      "n_tokens": 21,
+      "diversity_score": 0.7278
+    },
+    {
+      "text": "Rob Neyer a sabermetrician and columnist for ESPN.com , contradicted anyone who asserted Hamels ' skills had deteriorated , instead commenting ,",
+      "n_words": 16,
+      "n_unique_morphemes": 16,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.8125,
+      "n_tokens": 29,
+      "diversity_score": 0.7118
+    },
+    {
+      "text": "Roskill estimates that secondary production globally in 2010 was 39 @,@ 540 tonnes .",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2222,
+      "n_tokens": 20,
+      "diversity_score": 0.7346
+    },
+    {
+      "text": "Garner , Mandy . \" The Good Jewish Boys Go into Battle . \" Times Higher Education Supplement 16 December 2005 .",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.9286,
+      "n_tokens": 27,
+      "diversity_score": 0.7183
+    },
+    {
+      "text": "= = = Saint Antonius of Padua and Helen Who Couldn 't Help It = = =",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 20,
+      "diversity_score": 0.7222
+    },
+    {
+      "text": "Avalon ( serialized in Argosy , August 16 to September 6 , 1919 ; not reprinted )",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.7778,
+      "n_tokens": 25,
+      "diversity_score": 0.7654
+    },
+    {
+      "text": "magnetic data evidence suggesting that Europa , Ganymede and Callisto have a liquid @-@ saltwater layer under the visible surface ;",
+      "n_words": 17,
+      "n_unique_morphemes": 17,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.6471,
+      "n_tokens": 28,
+      "diversity_score": 0.7026
+    },
+    {
+      "text": "Bioinformatic Harvester A Meta search engine ( 29 databases ) for gene and protein information .",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.8182,
+      "n_tokens": 20,
+      "diversity_score": 0.7121
+    },
+    {
+      "text": "Pietro Paolo de Conti ( September 24 , 1759 ) – Cardinal @-@ Priest of S. Stefano al Monte Celio",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.5833,
+      "n_tokens": 31,
+      "diversity_score": 0.7546
+    },
+    {
+      "text": "Debate with Shlomo Ben @-@ Ami on Democracy Now ! , February 14 , 2006",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.6667,
+      "n_tokens": 24,
+      "diversity_score": 0.7593
+    },
+    {
+      "text": "Order of St. Anne , 2nd Class , with Swords ( Russian Empire ) on 15 February 1917",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.4,
+      "n_tokens": 24,
+      "diversity_score": 0.7444
+    },
+    {
+      "text": "\" Dennis Ross and the peace process : subordinating Palestinian rights to Israeli ' needs ' \" , Institute for Palestine Studies , 2007 ; ISBN 0 @-@ 88728 @-@ 308 @-@ X",
+      "n_words": 17,
+      "n_unique_morphemes": 17,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.7647,
+      "n_tokens": 47,
+      "diversity_score": 0.7647
+    },
+    {
+      "text": "VIDEO : Norman Finkelstein - The Coming Breakup of American Zionism , presentation in Olympia , Washington , May 8 , 2008 .",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.1429,
+      "n_tokens": 30,
+      "diversity_score": 0.7302
+    },
+    {
+      "text": "Eye of the Hurricane ( WWF / E ) / Nightmare on Helms Street ( WCW / WWE ) ( Spinning headlock elbow drop )",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 30,
+      "diversity_score": 0.7222
+    },
+    {
+      "text": "On 9 September 2013 a plaque to mark Meyerbeer 's last residence was put up at Pariser Platz 6a , Berlin .",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 30,
+      "diversity_score": 0.7222
+    },
+    {
+      "text": "Of these , zoologists Colin Groves and Peter Grubb identify O. o. hastata , O. o. montana , O. o. ourebi and O. o. quadriscopa as independent species in their 2011 publication Ungulate Taxonomy .",
+      "n_words": 22,
+      "n_unique_morphemes": 21,
+      "umr": 0.9545,
+      "ttr": 0.9545,
+      "sfs": 2.5455,
+      "n_tokens": 56,
+      "diversity_score": 0.6919
+    },
+    {
+      "text": "I. suessii , described by Emanuel Bunzel in 1871 , has been reassigned to Mochlodon suessi .",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.4167,
+      "n_tokens": 29,
+      "diversity_score": 0.7454
+    },
+    {
+      "text": "Delapparentia turolensis was named in 2011 based on a specimen previously assigned to Iguanodon bernissartensis .",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2308,
+      "n_tokens": 29,
+      "diversity_score": 0.735
+    },
+    {
+      "text": "A \" Summary of the Work Done for November , 1862 , Little Rock Arsenal \" shows : Fabrication :",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.9167,
+      "n_tokens": 23,
+      "diversity_score": 0.7176
+    },
+    {
+      "text": "Matt Morgan – backing vocals on \" Decatur , or , Round of Applause for Your Stepmother ! \"",
+      "n_words": 13,
+      "n_unique_morphemes": 13,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.7692,
+      "n_tokens": 23,
+      "diversity_score": 0.7094
+    },
+    {
+      "text": "Saprang stands 161 centimeters tall and as of March 2007 , weighed 52 kilograms .",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2,
+      "n_tokens": 22,
+      "diversity_score": 0.7333
+    },
+    {
+      "text": "L. c. wallawalla ( Merriam ) – eastern Washington to northeastern California and northwestern Nevada",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.2,
+      "n_tokens": 22,
+      "diversity_score": 0.7333
+    },
+    {
+      "text": "Lazzaro Opizio Pallavicino ( September 26 , 1766 ) – Cardinal @-@ Priest of SS . Nereo ed Achilleo ; legate in Bologna",
+      "n_words": 14,
+      "n_unique_morphemes": 14,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.7143,
+      "n_tokens": 38,
+      "diversity_score": 0.7619
+    },
+    {
+      "text": "Mumaith Khan as Reshma , the dirt bike race organiser . She also appears in \" Bangaru Kodipetta \" .",
+      "n_words": 15,
+      "n_unique_morphemes": 15,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 1.8,
+      "n_tokens": 27,
+      "diversity_score": 0.7111
+    },
+    {
+      "text": "\" The Senate : Unloving Acts \" . Time . 1 June 1970 . Retrieved 10 April 2007 .",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.375,
+      "n_tokens": 27,
+      "diversity_score": 0.7986
+    },
+    {
+      "text": "Other spellings in English have included Caipha , Kaipha , Caiffa , Kaiffa and Khaifa .",
+      "n_words": 12,
+      "n_unique_morphemes": 12,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.25,
+      "n_tokens": 27,
+      "diversity_score": 0.7361
+    },
+    {
+      "text": "\" Abba Eban with Footnotes \" , Journal of Palestine Studies , vol 32 . ( 2003 ) , pp. 74 – 89",
+      "n_words": 10,
+      "n_unique_morphemes": 10,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.2,
+      "n_tokens": 32,
+      "diversity_score": 0.7889
+    },
+    {
+      "text": "Xenon is a competitive inhibitor of the serotonin 5 @-@ HT3 receptor . While neither anesthetic nor antinociceptive this activity reduces anesthesia @-@ emergent nausea and vomiting .",
+      "n_words": 21,
+      "n_unique_morphemes": 21,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.0,
+      "n_tokens": 42,
+      "diversity_score": 0.7222
+    },
+    {
+      "text": "რ ( rae ) is frequently written with one arc , , like a Latin 〈 h 〉 .",
+      "n_words": 9,
+      "n_unique_morphemes": 9,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3333,
+      "n_tokens": 21,
+      "diversity_score": 0.7407
+    },
+    {
+      "text": "Karin Dor as Helga Brandt / No. 11 : Osato 's secretary and a SPECTRE assassin .",
+      "n_words": 11,
+      "n_unique_morphemes": 11,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 2.3636,
+      "n_tokens": 26,
+      "diversity_score": 0.7424
+    },
+    {
+      "text": "Giovanni Francesco Stoppani ( November 26 , 1753 ) – Cardinal @-@ Bishop of Palestrina",
+      "n_words": 8,
+      "n_unique_morphemes": 8,
+      "umr": 1.0,
+      "ttr": 1.0,
+      "sfs": 3.25,
+      "n_tokens": 26,
+      "diversity_score": 0.7917
+    }
+  ]
+}
