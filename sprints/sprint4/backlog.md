@@ -23,8 +23,8 @@ Sprint 3까지의 실험 갭을 보완하고, 논문으로 완성한다.
 | S4-5 | Activation 시각화 개선 | 🟡 중간 | ✅ 완료 |
 | C_v5 | token richness δ 효과 검증 (C_v5 / C_v5_delta ablation) | 🟡 중간 | ✅ 완료 |
 | S4-9 | C_en_v3 생성 + Llama3-Ko 재실험 (영어 다양성 검증) | 🔴 최고 | ✅ 완료 |
-| S4-10 | EEVE kmmlu (A/B/C_v3/C_v3_eeve) | 🟡 중간 | 🔄 진행 중 |
-| S4-11 | EXAONE35 kmmlu (A/B/C_v3/C_v3_exaone) | 🟡 중간 | 🔄 진행 중 |
+| S4-10 | EEVE kmmlu (A/B/C_v3/C_v3_eeve) | 🟡 중간 | ✅ 완료 |
+| S4-11 | EXAONE35 kmmlu (A/B/C_v3/C_v3_exaone) | 🟡 중간 | ✅ 완료 |
 | S4-6 | SmoothScale alpha 탐색 (0.1~0.3, layer-wise) | 🟢 낮음 | ⬜ 대기 |
 | S4-7 | AWQ A vs C_v3 (방법론 독립성 확인) | 🟢 낮음 | ⬜ 대기 |
 | S4-8 | 논문 작성 | 🔴 최고 (6/12) | ⬜ 대기 |
@@ -184,7 +184,7 @@ Sprint 4 backlog 생성. Sprint 3 갭 분석 완료:
 - S4-1~S4-4 모두 완료
 - C_v5 / C_v5_delta ablation 완료 → cross-sentence coverage가 within-sentence richness보다 중요
 - S4-9 (C_en_v3 + Llama3-Ko) 완료 → C_en_v3(0.5916) ≈ A(0.5964), 다양성 효과 미미
-  - 이유: Wikitext-2 자체가 이미 균질한 고품질 텍스트
+  - 수정된 이유: A가 long-paragraph(avg 104.9 words)으로 이미 절대 lemma_pos 커버리지 3286 달성 (C_en_v3 1113), 텍스트 청크 길이 효과
 - Qwen2 C_zh_v3 완료 → C-Eval 0.787 (모든 조건 중 최고)
 - Llama3-Ko FP16 기준값: 0.5932
 - EEVE / EXAONE35 kmmlu: 진행 중 (GPU0/1)
@@ -194,3 +194,16 @@ Sprint 4 backlog 생성. Sprint 3 갭 분석 완료:
 - EEVE tokenizer cache 미완 → snapshot_download로 tokenizer만 추가 다운로드
 
 상세 결과: `thoughts/03_Sprint4_실험결과_종합.md`
+
+### 2026-04-13
+
+실험 완료:
+- S4-10 EEVE kmmlu: KoBEST C_v3_eeve(0.7669) 최고, kmmlu B(0.4126) 최고 → 태스크별 역전
+- S4-11 EXAONE35 kmmlu: KoBEST B(0.7420) 최고, kmmlu A(0.4346) 최고 → EXAONE도 영어 지식 recall↑
+
+결과 분석 완료 (thoughts/04_결과분析_심화_계획_및_진행.md):
+- A-1 Levene's test: 분산비 6.46x (C_v3가 B보다 6배 안정적)
+- A-2 C_en_v3 ≈ A 원인: A long-paragraph 효과 (절대 커버리지 3286 vs 1113)
+- A-3 KoBEST/kmmlu 불일치: 형태소 다양성 ≠ 도메인 다양성, 보존 능력 유형 다름
+
+**현재 상태: 모든 계획된 실험 완료. S4-8 논문 작성만 남음.**
