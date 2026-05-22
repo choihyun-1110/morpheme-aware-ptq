@@ -25,8 +25,12 @@ Sprint 3까지의 실험 갭을 보완하고, 논문으로 완성한다.
 | S4-9 | C_en_v3 생성 + Llama3-Ko 재실험 (영어 다양성 검증) | 🔴 최고 | ✅ 완료 |
 | S4-10 | EEVE kmmlu (A/B/C_v3/C_v3_eeve) | 🟡 중간 | ✅ 완료 |
 | S4-11 | EXAONE35 kmmlu (A/B/C_v3/C_v3_exaone) | 🟡 중간 | ✅ 완료 |
+| S4-12 | Task-Aware Calibration Bank (hybrid mixing) | 🔴 최고 | ✅ 완료 (DBAR-v1 실패, hybrid 분석 완료) |
+| S4-13 | Activation Sensitivity Score 정의 | 🟡 중간 | ✅ 완료 (Korean PPL + sensitivity score + model activation 비교) |
+| S4-14 | Layer-aware g64/g128 (API 확인 후) | 🟢 낮음 | ⬜ 대기 |
 | S4-6 | SmoothScale alpha 탐색 (0.1~0.3, layer-wise) | 🟢 낮음 | ⬜ 대기 |
 | S4-7 | AWQ A vs C_v3 (방법론 독립성 확인) | 🟢 낮음 | ⬜ 대기 |
+| **S4-15** | **Llama-3-8B (순수 영어) + C_en_v3 vs A (MMLU)** | 🔴 최고 | 🔄 실험 중 |
 | S4-8 | 논문 작성 | 🔴 최고 (6/12) | ⬜ 대기 |
 
 ---
@@ -169,6 +173,37 @@ docker exec llm-dev bash /home/choihyun/workspace/src/run_exp_llama3ko_cen.sh
 
 ---
 
+## S4-15: Llama-3-8B (순수 영어) + C_en_v3 vs A — MMLU 검증
+
+**배경 및 동기:**
+- S4-9 (Llama3-Ko C_en_v3)에서 C_en_v3 ≈ A (0.5804 vs 0.5758) → 다양성 효과 미미
+- 그런데 Llama3-Ko-8B(beomi/Llama-3-Open-Ko-8B)는 사실 한국어 지속학습 모델 → 순수 영어 모델로 보기 어려움
+- **수정**: meta-llama/Meta-Llama-3-8B (순수 영어 사전학습) 사용 → 훨씬 깔끔한 실험 설계
+
+**실험 설계:**
+- 모델: `meta-llama/Meta-Llama-3-8B` (Llama3 원본, 영어 전용)
+- 조건: A (랜덤 Wikitext-2), C_en_v3 (다양성 Wikitext-2)
+- 평가: MMLU (57과목, 영어 지식 — 한국어 kmmlu와 대응)
+- GPU: TITAN RTX GPU0 또는 1
+
+**가설:**
+| 결과 | 해석 |
+|------|------|
+| C_en_v3 > A | 다양성 원칙이 영어에서도 유효 → **언어 독립적 일반 원리 확립** |
+| C_en_v3 ≈ A | Wikitext-2 동질성 효과 (S4-9와 동일 패턴, 데이터 소스 문제) |
+
+**스크립트:** `src/run_exp_llama3_base_mmlu.sh`
+
+```bash
+docker exec llm-dev bash /home/choihyun/workspace/src/run_exp_llama3_base_mmlu.sh
+```
+
+**논문 반영:**
+- S4-9 (Llama3-Ko) 결과는 모델 혼재 문제로 제한적 → S4-15로 대체 또는 보완
+- 성공 시 Section 6 ("언어 독립성 검증")의 핵심 근거 강화
+
+---
+
 ## 진행 메모
 
 ### 2026-03-29
@@ -198,8 +233,8 @@ Sprint 4 backlog 생성. Sprint 3 갭 분석 완료:
 ### 2026-04-13
 
 실험 완료:
-- S4-10 EEVE kmmlu: KoBEST C_v3_eeve(0.7669) 최고, kmmlu B(0.4126) 최고 → 태스크별 역전
-- S4-11 EXAONE35 kmmlu: KoBEST B(0.7420) 최고, kmmlu A(0.4346) 최고 → EXAONE도 영어 지식 recall↑
+- S4-10 EEVE kmmlu: KoBEST C_v3_eeve(0.7551) 최고, kmmlu B(0.4126) 최고 → 태스크별 역전
+- S4-11 EXAONE35 kmmlu: KoBEST C_v3_exaone(0.7415) 최고, kmmlu A(0.4346) 최고 → EXAONE도 영어 지식 recall↑
 
 결과 분석 완료 (thoughts/04_결과분析_심화_계획_및_진행.md):
 - A-1 Levene's test: 분산비 6.46x (C_v3가 B보다 6배 안정적)
@@ -207,3 +242,13 @@ Sprint 4 backlog 생성. Sprint 3 갭 분석 완료:
 - A-3 KoBEST/kmmlu 불일치: 형태소 다양성 ≠ 도메인 다양성, 보존 능력 유형 다름
 
 **현재 상태: 모든 계획된 실험 완료. S4-8 논문 작성만 남음.**
+
+### 2026-04-23
+
+S4-12 Task-Aware Calibration Bank 완료:
+- Hybrid H1~H4 모두 완료, SOLAR kmmlu baseline 측정 완료
+- 핵심 결과: SOLAR에서는 C_v3가 KoBEST/kmmlu 모두 최선 (task tradeoff 없음)
+- H4(25%Cv3+75%B): KoBEST=0.6413, C_v3(0.6356) 초과 — mixing synergy
+- H3(75%Cv3+25%B): kmmlu=0.3787, C_v3(0.3750) 초과 — mixing synergy
+- DBAR-v1: inference tensor 에러로 실패, 논문 일정 감안해 skip 결정
+- 상세: `thoughts/05_Task_Aware_Calibration_Bank_설계_및_실험.md`

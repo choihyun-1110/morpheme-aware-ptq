@@ -26,3 +26,9 @@ __pycache__/
 # 임시 파일
 *.tmp
 *.swp
+
+# 비공개
+GYU
+GYU/
+**/GYU
+**/GYU/
