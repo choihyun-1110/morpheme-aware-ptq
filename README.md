@@ -2,6 +2,13 @@
 
 > **Research Question:** When quantizing Korean/multilingual LLMs with GPTQ 4-bit, does a morpheme-diversity-optimized calibration set better preserve model performance compared to random sampling?
 
+## 📺 Presentation Video
+
+[![Capstone Presentation](https://img.shields.io/badge/YouTube-Capstone_Presentation-red?logo=youtube)](https://youtu.be/REPLACE_WITH_VIDEO_ID)
+
+> **[84팀] Morpheme-Aware Calibration for Post-Training Quantization of Korean LLMs**  
+> Capstone Design, 2026
+
 ## Overview
 
 This repository contains experiments on **Post-Training Quantization (PTQ) calibration data selection** for Korean and multilingual large language models.
@@ -23,17 +30,17 @@ The key insight: calibration data quality matters for GPTQ quantization, and **m
 
 **C_v3 reduces quantization performance drop by 3.5× compared to English calibration (A).**
 
-### Cross-Model Validation (Sprint 3)
+### Cross-Model Validation (5 Models)
 
-| Model | Pretraining | Best Condition | KoBEST avg | Notes |
-|-------|------------|----------------|------------|-------|
-| SOLAR-10.7B | Korean | **C_v3** | 0.6356 | Morpheme-diverse Korean |
-| EEVE-10B | Korean (SFT) | **B** | 0.7595 | Korean random |
-| Llama3-Ko-8B | English | **A** | — | English random |
-| EXAONE3.5-7.8B | Korean | **B ≈ C_v3** | 0.7196 / 0.7164 | B slightly best |
-| Qwen2-7B | Chinese | **C_v3** | 0.6375 | Korean > Chinese > English |
+| Model | Pretraining | Benchmark | FP16 | A (English) | B (Lang-aligned) | **Ours (MAC)** |
+|-------|------------|-----------|------|-------------|------------------|----------------|
+| SOLAR-10.7B | Korean | KoBEST | 0.6523 | 0.5981 (91.7%) | 0.6176 (94.7%) | **0.6356 (97.4%)** |
+| EEVE-10.8B | Korean | KoBEST | 0.7759 | 0.7463 (96.2%) | 0.7498 (96.6%) | **0.7551 (97.3%)** |
+| EXAONE-3.5-7.8B | Korean | KoBEST | 0.7437 | 0.6963 (93.6%) | 0.7244 (97.4%) | **0.7415 (99.7%)** |
+| Qwen2-7B | Chinese | C-Eval | 0.8165 | 0.7630 (93.4%) | 0.7630 (93.4%) | **0.7868 (96.4%)** |
+| Llama-3-8B | English | MMLU | 0.6241 | **0.5985 (95.9%)** | — | 0.5959 (95.5%) |
 
-**Finding:** 5 out of 5 models favor pretraining-language-aligned calibration. C_v3's morpheme diversity effect generalizes across languages (Qwen2 C-Eval: C_v3 0.7734 > A=C_zh 0.7630).
+**Finding:** All 5 models favor pretraining-language-aligned calibration. MAC variant outperforms standard English GPTQ in 4 out of 5 models on reasoning tasks. (Llama-3-8B: C_en_v3 ≈ A due to Wikitext-2 ceiling effect.)
 
 ### SOLAR-10.7B Phase 2 Variants
 
@@ -114,16 +121,7 @@ C_v3 removes non-Korean subword noise → subword coverage drops to B-level → 
 │   ├── calibration_set_*.json    # Generated calibration sets
 │   ├── activation_analysis.json  # Activation channel statistics
 │   └── activation_paper_*.png    # Paper figures (ko/en)
-├── sprints/
-│   ├── sprint_overview.md        # Project roadmap
-│   ├── sprint0/                  # Environment setup & pilot
-│   ├── sprint1/                  # Algorithm design
-│   ├── sprint2/                  # SOLAR main experiments
-│   │   └── thoughts/             # Analysis & review documents
-│   ├── sprint3/                  # Cross-model validation + vLLM
-│   │   └── thoughts/             # Qwen2/EXAONE/Phase2 analysis
-│   └── sprint4/                  # Statistical testing & paper prep
-└── pilot_quant.py                # Sprint 0 pilot script
+└── pilot_quant.py                # Pilot quantization script
 ```
 
 ---

@@ -27,6 +27,17 @@ __pycache__/
 *.tmp
 *.swp
 
+# 스프린트 문서 (내부 연구 노트)
+sprints/
+
+# 논문 초안 / 보고서
+paper_draft_v1.md
+*보고서*.md
+*report*.md
+
+# eval 결과 (이상한 경로)
+results/__home__*
+
 # 비공개
 GYU
 GYU/
